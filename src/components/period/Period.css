@@ -1,0 +1,26 @@
+.period-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  min-height: 100vh;
+  width: 80%;
+}
+
+.period-header {
+  display: flex;
+}
+
+.period-header_title {
+  width: 100%;
+}
+
+.period-button {
+  align-self: center;
+  background-color: black;
+  display: flex;
+  width: fit-content;
+}
+
+.period-body {
+  white-space: pre-line;
+}

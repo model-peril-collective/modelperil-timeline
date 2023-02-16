@@ -1,0 +1,11 @@
+.header-wrapper {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
