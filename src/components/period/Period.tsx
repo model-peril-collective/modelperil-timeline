@@ -1,9 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import './Period.css';
+import { classNames } from '../../utils/Utils';
 
-const Period = () => {
+const Period = (props: { side?: 'left' | 'right' }) => {
+  const { side = 'left' } = props;
+
   return (
-    <article className="period-wrapper">
+    <article className={classNames('period-wrapper', side)}>
       <header className="period-header">
         <h2 className="period-header_title">1930</h2>
       </header>

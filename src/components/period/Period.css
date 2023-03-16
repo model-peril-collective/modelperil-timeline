@@ -3,11 +3,23 @@
   flex-direction: column;
   padding: 16px;
   min-height: 100vh;
-  width: 80%;
+  text-align: left;
+  width: 45%;
+}
+
+.period-wrapper.left {
+  align-self: baseline;
+}
+
+.period-wrapper.right {
+  align-self: end;
 }
 
 .period-header {
   display: flex;
+  /* below is example of changing styles based on scroll % */
+  /* font-size: calc(12px * 10 * var(--scroll)); */
+  text-align: center;
 }
 
 .period-header_title {

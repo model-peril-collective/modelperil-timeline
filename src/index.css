@@ -97,6 +97,7 @@ button {
 }
 
 body {
+  background-color: #282c34;
   margin: 0;
   overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
@@ -104,6 +105,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* can uncomment below to see all useable space */
+/* body * {
+  outline: 1px solid red;
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
