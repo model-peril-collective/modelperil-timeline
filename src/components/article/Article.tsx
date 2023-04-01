@@ -1,12 +1,24 @@
 /* eslint-disable react/no-unescaped-entities */
-import './Period.css';
+import './Article.css';
 import { classNames } from '../../utils/Utils';
+import { useEffect, forwardRef } from 'react';
 
-const Period = (props: { side?: 'left' | 'right' }) => {
-  const { side = 'left' } = props;
+interface ArticleProps {
+  side?: 'left' | 'right',
+  inView: boolean,
+}
+
+export type Ref = HTMLDivElement;
+
+const Article = forwardRef<Ref, ArticleProps>(function Article(props, ref) {
+  const { side = 'left', inView = false } = props;
+
+  useEffect(() => {
+    console.log(inView)
+  })
 
   return (
-    <article className={classNames('period-wrapper', side)}>
+    <div ref={ref} className={classNames('period-wrapper', side, inView ? 'visible' : '')}>
       <header className="period-header">
         <h2 className="period-header_title">1930</h2>
       </header>
@@ -37,8 +49,8 @@ const Period = (props: { side?: 'left' | 'right' }) => {
         tumeric gochujang. Bushwick tumblr fam readymade chia gochujang, prism godard fit schlitz
         tattooed paleo vape praxis locavore. Dummy text? More like dummy thicc text, amirite?
       </div>
-    </article>
+    </div>
   );
-};
+});
 
-export default Period;
+export default Article;
