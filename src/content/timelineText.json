@@ -1,0 +1,15 @@
+{
+  "articles": [
+    {
+      "id": "1907",
+      "title": "1907, Feb 15",
+      "content": "The Gentlemen's Agreement between the United States and Japan results in the <highlight>prohibition of labor immigration</highlight> from Japan. Pres. Theodore Roosevelt issues an executive order halting immigration from Hawai'i, Mexico, and Canada to the U.S. mainland, to reduce Japanese immigration.",
+      "type": "full"
+    },
+    {
+      "id": "1907-i",
+      "content": "src/content/timelineImages/1907Deport.png",
+      "type": "image"
+    }
+  ]
+}

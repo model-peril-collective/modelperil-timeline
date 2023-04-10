@@ -4,28 +4,30 @@ import Article from '../article/Article';
 import Timeline from '../timeline/Timeline';
 import './App.css';
 
+import timelineText from '../../content/timelineText.json';
+
 const App = () => {
-  const containerRef = useRef(null)
+  const containerRef = useRef(null);
   const [isIntersecting, setIsIntersecting] = useState(false);
-  
+
   const callbackFunction = (entries: any) => {
-    const [ entry ] = entries
-    setIsIntersecting(entry.isIntersecting)
-  }
+    const [entry] = entries;
+    setIsIntersecting(entry.isIntersecting);
+  };
 
   useEffect(() => {
     const options = {
       root: null,
       rootMargin: '0px',
       threshold: 0.5,
-    }
-    const observer = new IntersectionObserver(callbackFunction, options)
-    if (containerRef.current) observer.observe(containerRef.current)
+    };
+    const observer = new IntersectionObserver(callbackFunction, options);
+    if (containerRef.current) observer.observe(containerRef.current);
 
     return () => {
-      if(containerRef.current) observer.unobserve(containerRef.current)
-    }
-  }, [containerRef])
+      if (containerRef.current) observer.unobserve(containerRef.current);
+    };
+  }, [containerRef]);
 
   useEffect(() => {
     document.body.style.setProperty('--scroll', '0%');
@@ -49,17 +51,22 @@ const App = () => {
       <Timeline />
       <div className="content">
         <Header />
-          {/* Andres focus */}
-          <Article inView={isIntersecting} />
-          <Article inView={isIntersecting} side="right" ref={containerRef} />
-          <Article inView={isIntersecting} />
-          <Article inView={isIntersecting} side="right" />
+        {/* Andres focus */}
+        {/* <Article inView={isIntersecting} /> */}
+        <Article
+          inView={isIntersecting}
+          article={timelineText.articles[0]}
+          side="right"
+          ref={containerRef}
+        />
+        <Article inView={isIntersecting} article={timelineText.articles[1]} />
+        {/* <Article inView={isIntersecting} side="right" /> */}
 
-          {/* Jeff focus */}
-          <Article inView={isIntersecting} />
-          <Article inView={isIntersecting} side="right" />
-          <Article inView={isIntersecting} />
-          <Article inView={isIntersecting} side="right" />
+        {/* Jeff focus */}
+        {/* <Article inView={isIntersecting} /> */}
+        {/* <Article inView={isIntersecting} side="right" /> */}
+        {/* <Article inView={isIntersecting} /> */}
+        {/* <Article inView={isIntersecting} side="right" /> */}
       </div>
     </div>
   );
