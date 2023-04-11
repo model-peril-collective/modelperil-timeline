@@ -1,21 +1,27 @@
 /* eslint-disable react/no-unescaped-entities */
-import './Article.css';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { classNames } from '../../utils/Utils';
-import { useEffect, forwardRef } from 'react';
+import './Article.css';
 
 interface ArticleProps {
   side?: 'left' | 'right';
-  inView: boolean;
   article?: any;
+  handleInView?: () => void;
 }
 
 export type Ref = HTMLDivElement;
 
-const Article = forwardRef<Ref, ArticleProps>(function Article(props, ref) {
-  const { side = 'left', inView = false, article } = props;
+const Article = (props: ArticleProps) => {
+  const { side = 'left', article } = props;
+
+  const { ref, inView } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
 
   useEffect(() => {
-    console.log(article);
+    console.log(side, inView);
   });
 
   return (
@@ -30,6 +36,6 @@ const Article = forwardRef<Ref, ArticleProps>(function Article(props, ref) {
       </div>
     </>
   );
-});
+};
 
 export default Article;
