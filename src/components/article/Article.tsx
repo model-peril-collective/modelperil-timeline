@@ -4,6 +4,8 @@ import { useInView } from 'react-intersection-observer';
 import { classNames } from '../../utils/Utils';
 import './Article.css';
 
+const imgSrc = require('../../content/timelineImages/1907Deport.png');
+
 interface ArticleProps {
   side?: 'left' | 'right';
   article?: any;
@@ -32,7 +34,8 @@ const Article = (props: ArticleProps) => {
         </header>
         <button className="period-button">Slide</button>
         {article.type === 'full' && <div className="period-body">{article && article.content}</div>}
-        {article.type === 'image' && <img src="/content/timelineImages/1907Deport.png" />}
+        {article.type === 'image' && <img src={imgSrc} />}
+        {article.type === 'image' && <img src={article.content} />}
       </div>
     </>
   );

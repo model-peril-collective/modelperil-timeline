@@ -8,7 +8,7 @@
     },
     {
       "id": "1907-i",
-      "content": "src/content/timelineImages/1907Deport.png",
+      "content": "./assets/1907Deport.png",
       "type": "image"
     }
   ]

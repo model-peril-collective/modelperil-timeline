@@ -5,7 +5,7 @@
   min-height: 100vh;
   text-align: left;
   width: 45%;
-  animation: fade 5s infinite;
+  /* animation: fade 5s infinite; */
   opacity: 0;
 }
 
@@ -41,13 +41,4 @@
 
 .period-body {
   white-space: pre-line;
-}
-
-@keyframes fade {
-  0% {
-    background-color: #001F3F;
-  }
-  100% {
-    background-color: #FF4136;
-  }
 }
