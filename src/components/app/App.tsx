@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import Header from '../header/Header';
 import Article from '../article/Article';
-import Timeline from '../timeline/Timeline';
 import './App.css';
 
 import timelineText from '../../content/timelineText.json';
@@ -26,14 +25,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <Timeline />
+      {/* <Timeline /> */}
       <div className="content">
         <Header />
         {/* Andres focus */}
-        {/* <Article inView={isIntersecting} /> */}
         <Article article={timelineText.articles[0]} side="right" />
         <Article article={timelineText.articles[1]} />
-        {/* <Article inView={isIntersecting} side="right" /> */}
 
         {/* Jeff focus */}
         {/* <Article inView={isIntersecting} /> */}
