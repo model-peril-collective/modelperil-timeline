@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   padding: 16px;
-  min-height: 100vh;
+  min-height: 100dvh;
   text-align: left;
+  transition: opacity 500ms;
   width: 45%;
-  /* animation: fade 5s infinite; */
   opacity: 0;
 }
 
@@ -23,20 +23,11 @@
 
 .period-header {
   display: flex;
-  /* below is example of changing styles based on scroll % */
-  /* font-size: calc(12px * 10 * var(--scroll)); */
   text-align: center;
 }
 
 .period-header_title {
   width: 100%;
-}
-
-.period-button {
-  align-self: center;
-  background-color: black;
-  display: flex;
-  width: fit-content;
 }
 
 .period-body {
