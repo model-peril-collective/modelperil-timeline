@@ -1,12 +1,36 @@
 .header-wrapper {
   align-items: center;
-  background-color: var(--colorPrimary);
+  background: linear-gradient(var(--colorPrimary), var(--colorNeutral500));
   box-sizing: content-box;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  height: 100dvh;
+  justify-content: center;
   padding: 16px 24px;
-  position: sticky;
-  top: 0;
-  left: 0;
+  transition: opacity 200ms;
   width: 100%;
+}
+
+.header-wrapper.hidden > * {
+  opacity: 0;
+}
+
+.header-logo {
+  width: 80%;
+  filter: drop-shadow(5px 5px 5px var(--colorNeutral500));
+  -webkit-filter: drop-shadow(5px 5px 5px var(--colorNeutral500));
+}
+
+.header-title {
+  font-weight: 100;
+  font-size: 128px;
+  color: var(--colorNeutral100);
+}
+
+.header-name {
+  display: none;
+  /* background: linear-gradient(90deg, var(--colorWhite), var(--colorSecondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }

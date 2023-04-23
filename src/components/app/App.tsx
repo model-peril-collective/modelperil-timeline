@@ -25,11 +25,10 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* <Timeline /> */}
       <div className="content">
         <Header />
         {/* Andres focus */}
-        <Article article={timelineText.articles[0]} side="right" />
+        <Article article={timelineText.articles[0]} />
         <Article article={timelineText.articles[1]} />
 
         {/* Jeff focus */}
