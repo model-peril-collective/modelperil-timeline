@@ -7,12 +7,17 @@
   height: 100dvh;
   justify-content: center;
   padding: 16px 24px;
-  transition: opacity 200ms;
+  transition: opacity 3s;
   width: 100%;
 }
 
-.header-wrapper.hidden > * {
+.header-wrapper > * {
   opacity: 0;
+  transition: opacity 3s;
+}
+
+.header-wrapper.visible > * {
+  opacity: 1;
 }
 
 .header-logo {
@@ -22,9 +27,11 @@
 }
 
 .header-title {
+  color: var(--colorNeutral100);
   font-weight: 100;
   font-size: 128px;
-  color: var(--colorNeutral100);
+  filter: drop-shadow(5px 5px 5px var(--colorNeutral500));
+  -webkit-filter: drop-shadow(5px 5px 5px var(--colorNeutral500));
 }
 
 .header-name {
