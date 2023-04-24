@@ -1,13 +1,31 @@
 {
   "articles": [
     {
-      "id": "1907",
+      "date": "1907",
       "title": "1907, Feb 15",
       "content": "The Gentlemen's Agreement between the United States and Japan results in the <highlight>prohibition of labor immigration</highlight> from Japan. Pres. Theodore Roosevelt issues an executive order halting immigration from Hawai'i, Mexico, and Canada to the U.S. mainland, to reduce Japanese immigration.",
       "type": "full"
     },
     {
-      "id": "1907-i",
+      "date": "1907",
+      "content": "1907Deport.png",
+      "description": "Printed article from the year 1907",
+      "type": "image"
+    },
+    {
+      "date": "1907",
+      "content": "They don't think it be like it is, but it do",
+      "speaker": "Andres",
+      "type": "quote"
+    },
+    {
+      "date": "1923",
+      "title": "1923, Feb 15",
+      "content": "<p>I'm baby man bun snackwave activated charcoal master cleanse mukbang williamsburg taiyaki whatever. Ethical tacos succulents biodiesel, lomo celiac enamel pin taxidermy master cleanse hella kickstarter microdosing. Chicharrones williamsburg fam +1 four dollar toast franzen post-ironic seitan blackbird spyplane selvage 3 wolf moon dreamcatcher chillwave waistcoat. Tofu food truck jawn taxidermy waistcoat yr leggings paleo. Occupy VHS semiotics church-key la croix typewriter man bun neutral milk hotel tote bag beard prism.</p><p>Organic fanny pack vegan raw denim truffaut DIY lo-fi fit man braid air plant bespoke retro. Pop-up plaid etsy listicle banjo craft beer distillery praxis trust fund twee umami post-ironic gentrify. Flannel organic vinyl banh mi, wayfarers pok pok taiyaki. Skateboard chambray pitchfork selfies, messenger bag knausgaard fingerstache ennui vice franzen. Woke kickstarter DIY banjo, lyft raclette leggings typewriter ennui iPhone. Kickstarter jean shorts ennui chambray post-ironic microdosing ethical tumeric readymade direct trade yes plz cray pabst bushwick. Taxidermy ramps bicycle rights, everyday carry semiotics vegan thundercats paleo blackbird spyplane bruh iPhone drinking vinegar chartreuse.</p><p>Church-key iPhone mlkshk, cliche DSA same deep v 3 wolf moon before they sold out VHS kale chips four dollar toast. Sartorial succulents palo santo quinoa. Bodega boys pour-over activated charcoal direct trade. Cupping stumptown jawn, austin cold-pressed craft beer leggings artisan YOLO Brooklyn blackbird spyplane migas ethical marxism af. Organic wolf praxis woke tacos lomo roof party glossier iPhone succulents.</p>",
+      "type": "full"
+    },
+    {
+      "date": "1923",
       "content": "1907Deport.png",
       "type": "image"
     }
