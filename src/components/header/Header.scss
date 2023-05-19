@@ -9,15 +9,15 @@
   padding: 16px 24px;
   transition: opacity 3s;
   width: 100%;
-}
 
-.header-wrapper > * {
-  opacity: 0;
-  transition: opacity 3s;
-}
+  & > * {
+    opacity: 0;
+    transition: opacity 3s;
+  }
 
-.header-wrapper.visible > * {
-  opacity: 1;
+  &.visible > * {
+    opacity: 1;
+  }
 }
 
 .header-logo {

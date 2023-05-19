@@ -52,7 +52,7 @@ const Article = (props: ArticleProps) => {
       case PieceType.Full:
         return (
           <div
-            className={classNames('article-body', 'full')}
+            className={classNames('article-body')}
             dangerouslySetInnerHTML={{ __html: handleContent(content) }}
           />
         );
