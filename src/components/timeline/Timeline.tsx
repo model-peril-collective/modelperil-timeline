@@ -1,4 +1,4 @@
-import './Timeline.css';
+import './Timeline.scss';
 
 const Timeline = () => {
   return (

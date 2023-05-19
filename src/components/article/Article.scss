@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   padding: 16px;
-  min-height: 100dvh;
   text-align: left;
   transition: opacity 500ms;
   width: 600px;
@@ -32,6 +31,10 @@
 
 .article-body {
   white-space: pre-line;
+}
+
+.article-body.full {
+  min-height: 100dvh;
 }
 
 .article-body > p:not(:last-child) {

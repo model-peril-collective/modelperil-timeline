@@ -1,6 +1,6 @@
 import { useInView } from 'react-intersection-observer';
 import { classNames } from '../../utils/Utils';
-import './Header.css';
+import './Header.scss';
 
 import logo from '../../assets/logo.png';
 

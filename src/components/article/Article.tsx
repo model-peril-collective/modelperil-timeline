@@ -1,7 +1,6 @@
-/* eslint-disable react/no-unescaped-entities */
 import { useInView } from 'react-intersection-observer';
 import { classNames } from '../../utils/Utils';
-import './Article.css';
+import './Article.scss';
 
 export enum PieceType {
   Full = 'full',
@@ -53,7 +52,7 @@ const Article = (props: ArticleProps) => {
       case PieceType.Full:
         return (
           <div
-            className="article-body"
+            className={classNames('article-body', 'full')}
             dangerouslySetInnerHTML={{ __html: handleContent(content) }}
           />
         );
