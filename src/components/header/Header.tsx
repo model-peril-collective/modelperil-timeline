@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header ref={ref} className={classNames('header-wrapper', inView && 'visible')}>
-      <img className="header-logo" src={logo} />
+      <img className="header-logo" src={logo} alt="Model Peril logo" />
       <h1 className="header-title">
         <span className="header-name">Model Peril</span> Timeline
       </h1>

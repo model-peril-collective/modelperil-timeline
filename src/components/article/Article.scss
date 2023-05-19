@@ -6,18 +6,18 @@
   transition: opacity 500ms;
   width: 600px;
   opacity: 0;
-}
 
-.article-wrapper.visible {
-  opacity: 1;
-}
+  &.left {
+    align-self: baseline;
+  }
 
-.article-wrapper.left {
-  align-self: baseline;
-}
+  &.right {
+    align-self: end;
+  }
 
-.article-wrapper.right {
-  align-self: end;
+  &.visible {
+    opacity: 1;
+  }
 }
 
 .article-header {
@@ -31,14 +31,10 @@
 
 .article-body {
   white-space: pre-line;
-}
 
-.article-body.full {
-  min-height: 100dvh;
-}
-
-.article-body > p:not(:last-child) {
-  margin-bottom: 16px;
+  & > p:not(:last-child) {
+    margin-bottom: 16px;
+  }
 }
 
 .article-quote {
@@ -51,28 +47,28 @@
   font-size: 24px;
   line-height: 32px;
   text-align: center;
-}
 
-.article-quote_content::before {
-  content: open-quote;
-}
+  &::before,
+  &::after {
+    display: inline-block;
+    vertical-align: bottom;
+    position: relative;
+  }
 
-.article-quote_content::after {
-  content: close-quote;
-}
+  &::before {
+    content: open-quote;
+  }
 
-.article-quote_content::after,
-.article-quote_content::before {
-  display: inline-block;
-  vertical-align: bottom;
-  position: relative;
+  &::after {
+    content: close-quote;
+  }
 }
 
 .article-quote_speaker {
   margin-top: 8px;
   text-align: end;
-}
 
-.article-quote_speaker::before {
-  content: '- ';
+  &::before {
+    content: '- ';
+  }
 }
