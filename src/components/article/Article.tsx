@@ -1,6 +1,11 @@
-import { useInView } from 'react-intersection-observer';
+// import { useInView } from 'react-intersection-observer';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { classNames } from '../../utils/Utils';
 import './Article.scss';
+import { useLayoutEffect, useRef } from 'react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export enum PieceType {
   Full = 'full',
@@ -32,16 +37,18 @@ interface ArticleProps {
 
 const Article = (props: ArticleProps) => {
   const { article, side = 'left', threshold = 0.3, triggerOnce = false } = props;
+  const articleRef = useRef<HTMLDivElement>(null);
 
   let sampleImgSrc: string;
   if (article?.type === 'image') {
     sampleImgSrc = require(`../../content/timelineImages/${article.content}`);
   }
 
-  const { ref, inView } = useInView({
-    threshold,
-    triggerOnce,
-  });
+  // TODO: uncomment if IntersectionObserver is preferred
+  // const { ref, inView } = useInView({
+  //   threshold,
+  //   triggerOnce,
+  // });
 
   const handleContent = (content: string) => {
     let convertedStr = content;
@@ -92,8 +99,23 @@ const Article = (props: ArticleProps) => {
     }
   };
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.to('.article-content', {
+        x: 150,
+        scrollTrigger: {
+          trigger: '.article-content',
+          start: 'bottom bottom',
+          end: 'top 20%',
+          scrub: true,
+        },
+      });
+    }, articleRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div ref={ref} className={classNames('article-wrapper', side, inView ? 'visible' : '')}>
+    <div ref={articleRef} className={classNames('article-wrapper', side)}>
       <aside className="article-aside">{renderDate(article.date)}</aside>
       <article className={classNames('article-content')}>
         <header className="article-header">

@@ -1,8 +1,10 @@
 .article-wrapper {
+  border: 2px solid var(--colorSecondary);
+  flex: 0 1 24%;
   display: flex;
   flex-direction: row;
-  gap: 64px;
-  max-width: 1200px;
+  gap: 48px;
+  max-width: 1000px;
   opacity: 1;
   padding: 16px;
   text-align: left;
@@ -10,11 +12,11 @@
   width: 100%;
 
   &.left {
-    transform: translate(-200px, 0);
+    // transform: translate(-200px, 0);
   }
 
   &.right {
-    transform: translate(200px, 0);
+    // transform: translate(200px, 0);
   }
 
   &.visible {
@@ -24,8 +26,7 @@
 }
 
 .article-aside {
-  border-right: 2px solid var(--colorSecondary);
-  flex: 0 1 24%;
+  flex: 0 1 33%;
   font-family: 'Courier New', Courier, monospace;
   font-size: 18px;
   font-weight: 100;
