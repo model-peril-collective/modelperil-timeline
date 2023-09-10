@@ -7,9 +7,15 @@ export enum PieceType {
   Image = 'image',
   Quote = 'quote',
 }
+
+export interface Date {
+  year: string;
+  month?: string;
+  day?: string;
+}
 export interface Piece {
   content: string;
-  date: string;
+  date: Date;
   description?: string;
   speaker?: string;
   title?: string;
@@ -17,14 +23,15 @@ export interface Piece {
 }
 
 interface ArticleProps {
-  side?: 'left' | 'right';
+  side?: string;
   article: Piece;
   handleInView?: () => void;
   threshold?: number | number[];
+  triggerOnce?: boolean;
 }
 
 const Article = (props: ArticleProps) => {
-  const { article, threshold = 0.3 } = props;
+  const { article, side = 'left', threshold = 0.3, triggerOnce = false } = props;
 
   let sampleImgSrc: string;
   if (article?.type === 'image') {
@@ -33,6 +40,7 @@ const Article = (props: ArticleProps) => {
 
   const { ref, inView } = useInView({
     threshold,
+    triggerOnce,
   });
 
   const handleContent = (content: string) => {
@@ -43,6 +51,16 @@ const Article = (props: ArticleProps) => {
       .replaceAll('</highlight>', '</span>');
 
     return convertedStr;
+  };
+
+  const renderDate = (date: Date) => {
+    let result = date.year;
+
+    if (date.month && date.month.length > 0) result += `, ${date.month}`;
+
+    if (date.day && date.day.length > 0) result += ` ${date.day}`;
+
+    return <p className={classNames('article-aside_date')}>{result}</p>;
   };
 
   const renderArticleContent = (article: Piece) => {
@@ -57,7 +75,11 @@ const Article = (props: ArticleProps) => {
           />
         );
       case PieceType.Image:
-        return <img src={sampleImgSrc} />;
+        return (
+          <div className={classNames('article-body', 'image')}>
+            <img src={sampleImgSrc} />
+          </div>
+        );
       case PieceType.Quote:
         return (
           <div className={classNames('article-quote')}>
@@ -71,14 +93,15 @@ const Article = (props: ArticleProps) => {
   };
 
   return (
-    <>
-      <div ref={ref} className={classNames('article-wrapper', inView ? 'visible' : '')}>
+    <div ref={ref} className={classNames('article-wrapper', side, inView ? 'visible' : '')}>
+      <aside className="article-aside">{renderDate(article.date)}</aside>
+      <article className={classNames('article-content')}>
         <header className="article-header">
           <h2 className="article-header_title">{article.title}</h2>
         </header>
         {renderArticleContent(article)}
-      </div>
-    </>
+      </article>
+    </div>
   );
 };
 

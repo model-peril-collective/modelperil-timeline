@@ -7,6 +7,7 @@ import logo from '../../assets/logo.png';
 const Header = () => {
   const { ref, inView } = useInView({
     threshold: 0.3,
+    triggerOnce: true,
   });
 
   return (
