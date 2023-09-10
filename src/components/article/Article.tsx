@@ -101,13 +101,14 @@ const Article = (props: ArticleProps) => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.to('.article-content', {
-        x: 150,
+      gsap.from('.article-content', {
+        x: '200%',
         scrollTrigger: {
-          trigger: '.article-content',
-          start: 'bottom bottom',
-          end: 'top 20%',
+          end: 'top center',
+          markers: true,
           scrub: true,
+          start: 'top bottom-=5%',
+          trigger: '.article-content',
         },
       });
     }, articleRef);
