@@ -25,7 +25,7 @@
 }
 
 .article-aside {
-  flex: 0 1 20%;
+  flex: 0 1 12%;
   font-family: 'Courier New', Courier, monospace;
   font-size: 18px;
   font-weight: 100;
@@ -36,6 +36,8 @@
   left: 16px;
   line-height: 32px;
   position: sticky;
+  text-align: end;
+  white-space: nowrap;
   top: 16px;
 }
 
