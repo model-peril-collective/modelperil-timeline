@@ -1,11 +1,8 @@
-// import { useInView } from 'react-intersection-observer';
+import { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { classNames } from '../../utils/Utils';
 import './Article.scss';
-import { useLayoutEffect, useRef } from 'react';
-
-gsap.registerPlugin(ScrollTrigger);
 
 export enum PieceType {
   Full = 'full',
@@ -27,28 +24,20 @@ export interface Piece {
   type: PieceType;
 }
 
-interface ArticleProps {
+export interface ArticleProps {
   side?: string;
   article: Piece;
   handleInView?: () => void;
-  threshold?: number | number[];
-  triggerOnce?: boolean;
 }
 
 const Article = (props: ArticleProps) => {
-  const { article, side = 'left', threshold = 0.3, triggerOnce = false } = props;
+  const { article, side = 'left' } = props;
   const articleRef = useRef<HTMLDivElement>(null);
 
   let sampleImgSrc: string;
   if (article?.type === 'image') {
     sampleImgSrc = require(`../../content/timelineImages/${article.content}`);
   }
-
-  // TODO: uncomment if IntersectionObserver is preferred
-  // const { ref, inView } = useInView({
-  //   threshold,
-  //   triggerOnce,
-  // });
 
   const handleContent = (content: string) => {
     let convertedStr = content;
@@ -101,13 +90,17 @@ const Article = (props: ArticleProps) => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
+      gsap.registerPlugin(ScrollTrigger);
+
       gsap.from('.article-content', {
-        x: '200%',
+        autoAlpha: 0,
+        x: 400,
+        y: 200,
         scrollTrigger: {
-          end: 'top center',
+          end: 'top center-=5%',
           markers: true,
           scrub: true,
-          start: 'top bottom-=5%',
+          start: 'top bottom-=10%',
           trigger: '.article-content',
         },
       });
