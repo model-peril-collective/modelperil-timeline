@@ -1,4 +1,5 @@
-import { useLayoutEffect, useRef } from 'react';
+import { createRef, useLayoutEffect, useRef } from 'react';
+import LeaderLine from 'leader-line-new';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { classNames } from '../../utils/Utils';
@@ -32,7 +33,10 @@ export interface ArticleProps {
 
 const Article = (props: ArticleProps) => {
   const { article, side = 'left' } = props;
-  const articleRef = useRef<HTMLDivElement>(null);
+  const articleRef = createRef<HTMLDivElement>();
+  const lineEndRef = createRef<HTMLDivElement>();
+  const lineStartRef = createRef<HTMLDivElement>();
+  const leaderLine = useRef<LeaderLine>();
 
   let sampleImgSrc: string;
   if (article?.type === 'image') {
@@ -97,20 +101,36 @@ const Article = (props: ArticleProps) => {
         x: 400,
         y: 200,
         scrollTrigger: {
-          end: 'top center-=5%',
+          end: 'top center+=5%',
           markers: true,
           scrub: true,
-          start: 'top bottom-=10%',
+          start: 'top bottom-=5%',
           trigger: '.article-content',
         },
       });
     }, articleRef);
+
+    if (lineStartRef.current && lineEndRef.current && !leaderLine.current) {
+      leaderLine.current = new LeaderLine(lineStartRef.current, lineEndRef.current, {
+        start: lineStartRef.current,
+        startSocket: 'top',
+        end: lineEndRef.current,
+        endPlug: 'disc',
+        endSocket: 'top',
+        color: '#ffff00',
+      });
+    }
+
     return () => ctx.revert();
   }, []);
 
   return (
     <div ref={articleRef} className={classNames('article-wrapper', side)}>
       <aside className="article-aside">{renderDate(article.date)}</aside>
+      <div className={classNames('article-line')}>
+        <div ref={lineStartRef} className={classNames('article-line_start')} />
+        <div ref={lineEndRef} className={classNames('article-line_end')} />
+      </div>
       <article className={classNames('article-content')}>
         <header className="article-header">
           <h2 className="article-header_title">{article.title}</h2>
