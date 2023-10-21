@@ -1,5 +1,4 @@
 import { createRef, useLayoutEffect, useRef } from 'react';
-import LeaderLine from 'leader-line-new';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { classNames } from '../../utils/Utils';
@@ -26,17 +25,14 @@ export interface Piece {
 }
 
 export interface ArticleProps {
-  side?: string;
   article: Piece;
   handleInView?: () => void;
+  side?: string;
 }
 
 const Article = (props: ArticleProps) => {
   const { article, side = 'left' } = props;
   const articleRef = createRef<HTMLDivElement>();
-  const lineEndRef = createRef<HTMLDivElement>();
-  const lineStartRef = createRef<HTMLDivElement>();
-  const leaderLine = useRef<LeaderLine>();
 
   let sampleImgSrc: string;
   if (article?.type === 'image') {
@@ -96,41 +92,39 @@ const Article = (props: ArticleProps) => {
     const ctx = gsap.context(() => {
       gsap.registerPlugin(ScrollTrigger);
 
-      gsap.from('.article-content', {
-        autoAlpha: 0,
-        x: 400,
-        y: 200,
-        scrollTrigger: {
+      const scrollTriggerOptions = (trigger: string) => {
+        return {
           end: 'top center+=5%',
           markers: true,
           scrub: true,
           start: 'top bottom-=5%',
-          trigger: '.article-content',
-        },
+          trigger: trigger,
+        };
+      };
+
+      gsap.from('.article-content', {
+        autoAlpha: 0,
+        stagger: 1.0,
+        x: 400,
+        y: 200,
+        scrollTrigger: scrollTriggerOptions('.article-content'),
       });
+
+      // gsap.from('.article-body p', {
+      //   autoAlpha: 0,
+      //   stagger: 0.2,
+      //   x: 100,
+      //   y: 100,
+      //   scrollTrigger: scrollTriggerOptions('.article-body > p'),
+      // });
     }, articleRef);
 
-    if (lineStartRef.current && lineEndRef.current && !leaderLine.current) {
-      leaderLine.current = new LeaderLine(lineStartRef.current, lineEndRef.current, {
-        start: lineStartRef.current,
-        startSocket: 'top',
-        end: lineEndRef.current,
-        endPlug: 'disc',
-        endSocket: 'top',
-        color: '#ffff00',
-      });
-    }
-
     return () => ctx.revert();
-  }, []);
+  }, [articleRef]);
 
   return (
     <div ref={articleRef} className={classNames('article-wrapper', side)}>
       <aside className="article-aside">{renderDate(article.date)}</aside>
-      <div className={classNames('article-line')}>
-        <div ref={lineStartRef} className={classNames('article-line_start')} />
-        <div ref={lineEndRef} className={classNames('article-line_end')} />
-      </div>
       <article className={classNames('article-content')}>
         <header className="article-header">
           <h2 className="article-header_title">{article.title}</h2>

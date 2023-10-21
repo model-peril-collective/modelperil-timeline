@@ -1,4 +1,4 @@
-import Header from '../header/Header';
+import Hero from '../hero/Hero';
 import Article, { Piece } from '../article/Article';
 import './App.scss';
 
@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="content">
-        <Header />
+        <Hero />
         {timelineText.articles.map((piece, index) => {
           return <Article key={index} article={piece as Piece} />;
         })}

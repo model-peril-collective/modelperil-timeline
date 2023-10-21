@@ -3,7 +3,8 @@
   display: flex;
   flex: 0 1 24%;
   flex-direction: row;
-  max-width: 1440px;
+  gap: 48px;
+  max-width: 800px;
   opacity: 1;
   padding: 16px;
   text-align: left;
@@ -16,7 +17,7 @@
 }
 
 .article-aside {
-  flex: 0 1 12%;
+  flex: 0 1 140px;
   font-family: 'Courier New', Courier, monospace;
   font-size: 18px;
   font-weight: 100;
@@ -32,29 +33,8 @@
   top: 16px;
 }
 
-.article-line {
-  position: relative;
-  min-width: 48px;
-}
-
-.article-line_start,
-.article-line_end {
-  left: 0;
-  height: 0px;
-  position: absolute;
-  width: 100%;
-}
-
-.article-line_start {
-  top: 0;
-}
-
-.article-line_end {
-  bottom: 0;
-}
-
 .article-content {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
   flex: 1 1 0%;
@@ -68,11 +48,11 @@
   font-size: 22px;
   font-weight: 700;
   line-height: 32px;
-  text-align: center;
+  text-align: left;
 }
 
 .article-header_title {
-  padding: 16px;
+  padding: 16px 0;
   width: 100%;
 }
 
