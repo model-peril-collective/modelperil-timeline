@@ -16,7 +16,7 @@ export interface Date {
   day?: string;
 }
 export interface Piece {
-  content: string;
+  content: string | string[];
   date: Date;
   description?: string;
   speaker?: string;
@@ -39,12 +39,14 @@ const Article = (props: ArticleProps) => {
     sampleImgSrc = require(`../../content/timelineImages/${article.content}`);
   }
 
-  const handleContent = (content: string) => {
-    let convertedStr = content;
+  const handleContent = (content: string | string[]): string => {
+    let convertedStr = '';
 
-    convertedStr = content
-      .replaceAll('<highlight>', '<span class="highlight">')
-      .replaceAll('</highlight>', '</span>');
+    if (typeof content === 'string') {
+      convertedStr = content.replaceAll('<highlight>', '<span class="highlight">').replaceAll('</highlight>', '</span>');
+    } else if (typeof content === 'object') {
+      convertedStr = content.toString();
+    }
 
     return convertedStr;
   };
@@ -70,13 +72,15 @@ const Article = (props: ArticleProps) => {
             dangerouslySetInnerHTML={{ __html: handleContent(content) }}
           />
         );
+      // TODO: refactor image into a child component of the article body
       case PieceType.Image:
         return (
           <div className={classNames('article-body', 'image')}>
             <img src={sampleImgSrc} />
           </div>
         );
-      case PieceType.Quote:
+      // TODO: refactor quote into a child component of the article-body
+      case PieceType.Quote: // no example of standalone quote
         return (
           <div className={classNames('article-quote')}>
             <blockquote className={classNames('article-quote_content')}>{content}</blockquote>
@@ -94,7 +98,7 @@ const Article = (props: ArticleProps) => {
 
       const scrollTriggerOptions = (trigger: string) => {
         return {
-          end: 'top center+=5%',
+          end: 'top center+=15%',
           markers: true,
           scrub: true,
           start: 'top bottom-=5%',
@@ -105,6 +109,7 @@ const Article = (props: ArticleProps) => {
       gsap.from('.article-content', {
         autoAlpha: 0,
         stagger: 1.0,
+        scale: 0.5,
         x: 400,
         y: 200,
         scrollTrigger: scrollTriggerOptions('.article-content'),
@@ -126,9 +131,11 @@ const Article = (props: ArticleProps) => {
     <div ref={articleRef} className={classNames('article-wrapper', side)}>
       <aside className="article-aside">{renderDate(article.date)}</aside>
       <article className={classNames('article-content')}>
-        <header className="article-header">
-          <h2 className="article-header_title">{article.title}</h2>
-        </header>
+        {article.title && article.title.length > 0 && (
+          <header className="article-header">
+            <h2 className="article-header_title">{article.title}</h2>
+          </header>)
+        }
         {renderArticleContent(article)}
       </article>
     </div>
