@@ -3,31 +3,37 @@
     {
       "date": { "year": "1864" },
       "title": "Miscegenation term first used - sexual relations or marriage between different races",
-      "content": "<p>Only 9 US states never had anti-miscegenation laws</p><p>Used to discredit the abolitionist movement</p>",
+      "content": [
+        "Only 9 US states never had anti-miscegenation laws",
+        "Used to discredit the abolitionist movement"
+      ],
       "type": "full"
     },
     {
       "date": { "year": "1875", "month": "May", "day": "3rd" },
       "title": "Page Act: First federal immigration law",
-      "content": "<p>Prevents immigrants considered undesirable</p><p>Including Asian male contract laborers, Asian female prostitutes, and Asians convicted in their own country</p>",
+      "content": [
+        "Prevents immigrants considered <highlight>undesirable</highlight>",
+        "Including Asian male contract laborers, Asian female prostitutes, and Asians convicted in their own country"
+      ],
       "type": "full"
     },
     {
       "date": { "year": "1882", "month": "May", "day": "6th" },
-      "title": "1882, May 6th",
-      "content": "Chinese Exclusion Act: Banned Chinese laborers from immigrating",
+      "title": "Chinese Exclusion Act",
+      "content": "Banned Chinese laborers from immigrating",
       "type": "full"
     },
     {
       "date": { "year": "1882", "month": "Aug", "day": "3rd" },
-      "title": "Immigration Act of 1882: Targeted poor immigrants for exclusion and removal",
+      "title": "",
       "content": "Immigration Act of 1882: Targeted poor immigrants for exclusion and removal",
       "type": "full"
     },
     {
       "date": { "year": "1883", "month": "Jan", "day": "29th" },
-      "title": "Pace v. Alabama: US Supreme Court affirmed that Alabam's anti-miscegenation statute was constitutional",
-      "content": "",
+      "title": "",
+      "content": "Pace v. Alabama: US Supreme Court affirmed that Alabam's anti-miscegenation statute was constitutional",
       "type": "full"
     },
     {
@@ -45,7 +51,11 @@
     {
       "date": { "year": "1923", "month": "Fed", "day": "15th" },
       "title": "1923, Feb 15",
-      "content": "<p>I'm baby man bun snackwave activated charcoal master cleanse mukbang williamsburg taiyaki whatever. Ethical tacos succulents biodiesel, lomo celiac enamel pin taxidermy master cleanse hella kickstarter microdosing. Chicharrones williamsburg fam +1 four dollar toast franzen post-ironic seitan blackbird spyplane selvage 3 wolf moon dreamcatcher chillwave waistcoat. Tofu food truck jawn taxidermy waistcoat yr leggings paleo. Occupy VHS semiotics church-key la croix typewriter man bun neutral milk hotel tote bag beard prism.</p><p>Organic fanny pack vegan raw denim truffaut DIY lo-fi fit man braid air plant bespoke retro. Pop-up plaid etsy listicle banjo craft beer distillery praxis trust fund twee umami post-ironic gentrify. Flannel organic vinyl banh mi, wayfarers pok pok taiyaki. Skateboard chambray pitchfork selfies, messenger bag knausgaard fingerstache ennui vice franzen. Woke kickstarter DIY banjo, lyft raclette leggings typewriter ennui iPhone. Kickstarter jean shorts ennui chambray post-ironic microdosing ethical tumeric readymade direct trade yes plz cray pabst bushwick. Taxidermy ramps bicycle rights, everyday carry semiotics vegan thundercats paleo blackbird spyplane bruh iPhone drinking vinegar chartreuse.</p><p>Church-key iPhone mlkshk, cliche DSA same deep v 3 wolf moon before they sold out VHS kale chips four dollar toast. Sartorial succulents palo santo quinoa. Bodega boys pour-over activated charcoal direct trade. Cupping stumptown jawn, austin cold-pressed craft beer leggings artisan YOLO Brooklyn blackbird spyplane migas ethical marxism af. Organic wolf praxis woke tacos lomo roof party glossier iPhone succulents.</p>",
+      "content": [
+        "I'm baby man bun snackwave activated charcoal master cleanse mukbang williamsburg taiyaki whatever. Ethical tacos succulents biodiesel, lomo celiac enamel pin taxidermy master cleanse hella kickstarter microdosing. Chicharrones williamsburg fam +1 four dollar toast franzen post-ironic seitan blackbird spyplane selvage 3 wolf moon dreamcatcher chillwave waistcoat. Tofu food truck jawn taxidermy waistcoat yr leggings paleo. Occupy VHS semiotics church-key la croix typewriter man bun neutral milk hotel tote bag beard prism.",
+        "Organic fanny pack vegan raw denim truffaut DIY lo-fi fit man braid air plant bespoke retro. Pop-up plaid etsy listicle banjo craft beer distillery praxis trust fund twee umami post-ironic gentrify. Flannel organic vinyl banh mi, wayfarers pok pok taiyaki. Skateboard chambray pitchfork selfies, messenger bag knausgaard fingerstache ennui vice franzen. Woke kickstarter DIY banjo, lyft raclette leggings typewriter ennui iPhone. Kickstarter jean shorts ennui chambray post-ironic microdosing ethical tumeric readymade direct trade yes plz cray pabst bushwick. Taxidermy ramps bicycle rights, everyday carry semiotics vegan thundercats paleo blackbird spyplane bruh iPhone drinking vinegar chartreuse.",
+        "Church-key iPhone mlkshk, cliche DSA same deep v 3 wolf moon before they sold out VHS kale chips four dollar toast. Sartorial succulents palo santo quinoa. Bodega boys pour-over activated charcoal direct trade. Cupping stumptown jawn, austin cold-pressed craft beer leggings artisan YOLO Brooklyn blackbird spyplane migas ethical marxism af. Organic wolf praxis woke tacos lomo roof party glossier iPhone succulents."
+      ],
       "type": "full"
     },
     {
