@@ -1,4 +1,4 @@
-import { createRef, useLayoutEffect, useRef } from 'react';
+import { createRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { classNames } from '../../utils/Utils';
@@ -43,7 +43,9 @@ const Article = (props: ArticleProps) => {
     let convertedStr = '';
 
     if (typeof content === 'string') {
-      convertedStr = content.replaceAll('<highlight>', '<span class="highlight">').replaceAll('</highlight>', '</span>');
+      convertedStr = content
+        .replaceAll('<highlight>', '<span class="highlight">')
+        .replaceAll('</highlight>', '</span>');
     } else if (typeof content === 'object') {
       convertedStr = content.toString();
     }
@@ -109,19 +111,10 @@ const Article = (props: ArticleProps) => {
       gsap.from('.article-content', {
         autoAlpha: 0,
         stagger: 1.0,
-        scale: 0.5,
-        x: 400,
-        y: 200,
+        scale: 0.7,
+        x: 300,
         scrollTrigger: scrollTriggerOptions('.article-content'),
       });
-
-      // gsap.from('.article-body p', {
-      //   autoAlpha: 0,
-      //   stagger: 0.2,
-      //   x: 100,
-      //   y: 100,
-      //   scrollTrigger: scrollTriggerOptions('.article-body > p'),
-      // });
     }, articleRef);
 
     return () => ctx.revert();
@@ -134,8 +127,8 @@ const Article = (props: ArticleProps) => {
         {article.title && article.title.length > 0 && (
           <header className="article-header">
             <h2 className="article-header_title">{article.title}</h2>
-          </header>)
-        }
+          </header>
+        )}
         {renderArticleContent(article)}
       </article>
     </div>
