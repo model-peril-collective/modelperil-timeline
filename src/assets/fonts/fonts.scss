@@ -1,0 +1,207 @@
+/**
+*  Umpire Serif
+*/
+
+@font-face {
+  font-family: 'Umpire Serif';
+  src: url('./umpireserif/umpireserifregular.woff2') format('woff2'),
+    url('./umpireserif/umpireserifregular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/**
+*  Libre Baskerville
+*/
+
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('./librebaskerville/librebaskerville-regular.woff2') format('woff2'),
+    url('./librebaskerville/librebaskerville-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('./librebaskerville/librebaskerville-bold.woff2') format('woff2'),
+    url('./librebaskerville/librebaskerville-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url('./librebaskerville/librebaskerville-italic.woff2') format('woff2'),
+    url('./librebaskerville/librebaskerville-italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/**
+*  GT Super Text
+*/
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-black-italic-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-black-italic-trial-webfont.woff2') format(woff2);
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-black-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-black-trial-webfont.woff2') format(woff2);
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-bold-italic-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-bold-italic-trial-webfont.woff2') format(woff2);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-bold-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-bold-trial-webfont.woff2') format(woff2);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-medium-italic-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-medium-italic-trial-webfont.woff2') format(woff2);
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-medium-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-medium-trial-webfont.woff2') format(woff2);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-regular-italic-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-regular-italic-trial-webfont.woff2') format(woff2);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-regular-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-regular-trial-webfont.woff2') format(woff2);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-book-italic-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-book-italic-trial-webfont.woff2') format(woff2);
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-book-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-book-trial-webfont.woff2') format(woff2);
+  font-weight: 100;
+  font-style: normal;
+}
+
+/**
+*  GT Super Display
+*/
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-black-italic-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-black-italic-trial-webfont.woff2') format(woff2);
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-black-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-black-trial-webfont.woff2') format(woff2);
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-bold-italic-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-bold-italic-trial-webfont.woff2') format(woff2);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-bold-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-bold-trial-webfont.woff2') format(woff2);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-medium-italic-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-medium-italic-trial-webfont.woff2') format(woff2);
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-medium-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-medium-trial-webfont.woff2') format(woff2);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-regular-italic-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-regular-italic-trial-webfont.woff2') format(woff2);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-regular-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-regular-trial-webfont.woff2') format(woff2);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-book-italic-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-book-italic-trial-webfont.woff2') format(woff2);
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'GT Super';
+  src: url('./gtsupertext/gt-super-text-book-trial-webfont.woff') format(woff),
+    url('./gtsupertext/gt-super-text-book-trial-webfont.woff2') format(woff2);
+  font-weight: 100;
+  font-style: normal;
+}
