@@ -1,6 +1,6 @@
 import { Artifact } from './index';
 
-export interface Event {
+export interface Article {
   artifacts: Artifact[];
   date: {
     day?: string;

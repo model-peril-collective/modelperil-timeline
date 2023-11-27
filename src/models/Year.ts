@@ -1,6 +1,6 @@
-import { Event } from './index';
+import { Article } from './index';
 
 export interface Year {
   id: number;
-  events: Event[];
+  articles: Article[];
 }
