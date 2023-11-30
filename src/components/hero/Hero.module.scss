@@ -1,4 +1,4 @@
-.hero-wrapper {
+.wrapper {
   align-items: center;
   background: linear-gradient(var(--colorPrimary), var(--colorNeutral500));
   box-sizing: content-box;
@@ -19,13 +19,13 @@
   }
 }
 
-.hero-logo {
+.logo {
   width: 80%;
   filter: drop-shadow(5px 5px 5px var(--colorNeutral500));
   -webkit-filter: drop-shadow(5px 5px 5px var(--colorNeutral500));
 }
 
-.hero-title {
+.title {
   color: var(--colorNeutral100);
   font-weight: 100;
   font-size: 128px;
@@ -34,7 +34,7 @@
   -webkit-filter: drop-shadow(5px 5px 5px var(--colorNeutral500));
 }
 
-.hero-name {
+.name {
   display: none;
   /* background: linear-gradient(90deg, var(--colorWhite), var(--colorSecondary));
   background-clip: text;

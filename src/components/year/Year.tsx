@@ -1,11 +1,11 @@
 import { lazy, Suspense } from 'react';
-import { Article as ArticleModel, Date } from '../../models';
+import { Date, Story } from '../../models';
 import { ComponentFactory } from '..';
 
 const Story = lazy(() => ComponentFactory.StoryAsync());
 
 export interface YearProps {
-  articles: ArticleModel[];
+  articles: Story[];
   id: number;
 }
 
@@ -14,22 +14,21 @@ const Year = (props: YearProps) => {
 
   const renderDate = (date: Date) => {
     let content = date.year;
-  
+
     if (date.month && date.month.length > 0) content += `, ${date.month}`;
-  
+
     if (date.day) content += ` ${date.day}`;
 
     return content;
   };
 
-
   return (
     <div id={id.toString()}>
       <Suspense>
-        {articles.map(article => (
+        {articles.map((article) => (
           <>
             <span>{renderDate(article.date)}</span>
-            <Story title={article.title} subtitle={article.subtitle} artifacts={article.artifacts} />
+            <Story title={article.title} subtitle={article.subtitle} artifacts={article.forms} />
           </>
         ))}
       </Suspense>
