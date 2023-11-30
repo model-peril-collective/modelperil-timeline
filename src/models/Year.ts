@@ -1,6 +1,7 @@
-import { Article } from './index';
+import { Story } from './index';
 
 export interface Year {
   id: number;
-  articles: Article[];
+  articles: Story[];
+  position: 'left' | 'right';
 }

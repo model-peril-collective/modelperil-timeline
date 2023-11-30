@@ -1,4 +1,4 @@
 export interface Artifact {
-  type: 'paragraph' | 'image' | 'quote' | 'highlight' | 'popout';
+  type: string;
   content: string;
 }
