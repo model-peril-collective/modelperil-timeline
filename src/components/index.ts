@@ -1,7 +1,7 @@
 /**
  * Standard Imports
  */
-import Hero from './hero/Hero';
+import { ArtifactType } from './artifact/Artifact';
 
 /**
  * Object which exports functions that import components for lazy loading
@@ -9,11 +9,9 @@ import Hero from './hero/Hero';
 const ComponentFactory = {
   ArticleAsync: () => import('./article/Article'),
   ArtifactAsync: () => import('./artifact/Artifact'),
+  HeroAsync: () => import('./hero/Hero'),
   StoryAsync: () => import('./story/Story'),
   YearAsync: () => import('./year/Year'),
 };
 
-export {
-  ComponentFactory,
-  Hero
-};
+export { ArtifactType, ComponentFactory };

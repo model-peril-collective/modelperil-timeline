@@ -1,39 +1,38 @@
-import { useEffect, useState } from 'react';
-import Hero from '../hero/Hero';
-import Article, { Piece } from '../article/Article';
-import timelineText from '../../content/timelineText.json';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import contentJson from '../../content/content.json';
 import { Story } from '../../models';
-import './App.scss';
+import { ComponentFactory } from '../index';
+import styles from './App.module.scss';
+
+const Hero = lazy(() => ComponentFactory.HeroAsync());
+const Year = lazy(() => ComponentFactory.YearAsync());
 
 const App = () => {
-  const [years, setYears] = useState<{ [key: string]: Story[] }>({});
+  const [years, setYears] = useState<string[]>([]);
+
+  const getYearStories = (year: string) =>
+    contentJson.stories.filter((value) => year === value.date.year);
 
   useEffect(() => {
-    contentJson.stories.forEach((story: Story) => {
-      setYears((prevYears) => {
-        console.log(prevYears[story.date.year]?.some((obj) => obj === story));
-        return {
-          ...prevYears,
-          [story.date.year]: [...(prevYears[story.date.year] ?? []), story],
-        };
-      });
-    });
+    const unique = new Set<string>();
+    contentJson.stories.forEach((story: Story) => unique.add(story.date.year));
+
+    const sortedYears = [...unique].sort((a, b) => parseInt(a) - parseInt(b));
+
+    setYears(sortedYears);
   }, []);
 
-  useEffect(() => {
-    // TODO: potentially stories sort within the year here
-    console.log(years);
-  }, [years]);
-
   return (
-    <div className="app">
-      <div className="content">
+    <div className={styles.app}>
+      <Suspense>
         <Hero />
-        {timelineText.articles.map((piece, index) => {
-          return <Article key={index} article={piece as Piece} />;
+      </Suspense>
+      {/* <div className={styles.content}> */}
+      {years.length > 0 &&
+        years.map((year) => {
+          return <Year key={year} id={year} stories={getYearStories(year)} />;
         })}
-      </div>
+      {/* </div> */}
     </div>
   );
 };

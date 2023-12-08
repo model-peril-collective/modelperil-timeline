@@ -1,38 +1,32 @@
 import { lazy, Suspense } from 'react';
-import { Date, Story } from '../../models';
+import { Story as StoryModel } from '../../models';
 import { ComponentFactory } from '..';
+import styles from './Year.module.scss';
 
 const Story = lazy(() => ComponentFactory.StoryAsync());
 
 export interface YearProps {
-  articles: Story[];
-  id: number;
+  stories: StoryModel[];
+  id: string;
 }
 
 const Year = (props: YearProps) => {
-  const { articles, id } = props;
-
-  const renderDate = (date: Date) => {
-    let content = date.year;
-
-    if (date.month && date.month.length > 0) content += `, ${date.month}`;
-
-    if (date.day) content += ` ${date.day}`;
-
-    return content;
-  };
+  const { stories, id } = props;
 
   return (
-    <div id={id.toString()}>
+    <section id={'year-' + id.toString()} className={styles.sectionWrapper}>
       <Suspense>
-        {articles.map((article) => (
-          <>
-            <span>{renderDate(article.date)}</span>
-            <Story title={article.title} subtitle={article.subtitle} artifacts={article.forms} />
-          </>
+        {stories.map((story, i) => (
+          <Story
+            key={i}
+            title={story.title}
+            subtitle={story.subtitle}
+            artifacts={story.forms}
+            date={story.date}
+          />
         ))}
       </Suspense>
-    </div>
+    </section>
   );
 };
 

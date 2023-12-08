@@ -1,5 +1,5 @@
+import clsx from 'clsx';
 import { useInView } from 'react-intersection-observer';
-import { classNames } from '../../utils/Utils';
 import styles from './Hero.module.scss';
 
 import logo from '../../assets/logo.png';
@@ -11,7 +11,7 @@ const Hero = () => {
   });
 
   return (
-    <header ref={ref} className={classNames(styles.wrapper, inView && styles.visible)}>
+    <header ref={ref} className={clsx(styles.wrapper, inView && styles.visible)}>
       <img className={styles.logo} src={logo} alt="Model Peril logo" />
       <h1 className={styles.title}>
         <span className={styles.name}>Model Peril</span> Timeline
