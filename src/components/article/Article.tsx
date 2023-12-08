@@ -1,7 +1,7 @@
+import clsx from 'clsx';
 import { createRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { classNames } from '../../utils/Utils';
 import './Article.scss';
 
 export enum PieceType {
@@ -60,7 +60,7 @@ const Article = (props: ArticleProps) => {
 
     if (date.day && date.day.length > 0) result += ` ${date.day}`;
 
-    return <p className={classNames('article-aside_date')}>{result}</p>;
+    return <p className={clsx('article-aside_date')}>{result}</p>;
   };
 
   const renderArticleContent = (article: Piece) => {
@@ -70,23 +70,23 @@ const Article = (props: ArticleProps) => {
       case PieceType.Full:
         return (
           <div
-            className={classNames('article-body')}
+            className={clsx('article-body')}
             dangerouslySetInnerHTML={{ __html: handleContent(content) }}
           />
         );
       // TODO: refactor image into a child component of the article body
       case PieceType.Image:
         return (
-          <div className={classNames('article-body', 'image')}>
+          <div className={clsx('article-body', 'image')}>
             <img src={sampleImgSrc} />
           </div>
         );
       // TODO: refactor quote into a child component of the article-body
       case PieceType.Quote: // no example of standalone quote
         return (
-          <div className={classNames('article-quote')}>
-            <blockquote className={classNames('article-quote_content')}>{content}</blockquote>
-            <p className={classNames('article-quote_speaker')}>{speaker}</p>
+          <div className={clsx('article-quote')}>
+            <blockquote className={clsx('article-quote_content')}>{content}</blockquote>
+            <p className={clsx('article-quote_speaker')}>{speaker}</p>
           </div>
         );
       default:
@@ -121,9 +121,9 @@ const Article = (props: ArticleProps) => {
   }, [articleRef]);
 
   return (
-    <div ref={articleRef} className={classNames('article-wrapper', side)}>
+    <div ref={articleRef} className={clsx('article-wrapper', side)}>
       <aside className="article-aside">{renderDate(article.date)}</aside>
-      <article className={classNames('article-content')}>
+      <article className={clsx('article-content')}>
         {article.title && article.title.length > 0 && (
           <header className="article-header">
             <h2 className="article-header_title">{article.title}</h2>
