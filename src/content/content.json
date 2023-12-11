@@ -1,0 +1,78 @@
+{
+  "stories": [
+    {
+      "date": {
+        "day": "",
+        "month": "",
+        "year": "1864"
+      },
+      "title": "Miscegenation term first used",
+      "subtitle": "Sexual relations or marriage between different races",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Only 9 US States never had anti-miscegenation laws"
+        },
+        {
+          "type": "popout",
+          "content": "Used to discredit the abolitionist movement"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "3",
+        "month": "May",
+        "year": "1875"
+      },
+      "title": "Page Act of 1875",
+      "subtitle": "First federal immigration law",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Only 9 US States never had anti-miscegenation laws"
+        },
+        {
+          "type": "popout",
+          "content": "Used to discredit the abolitionist movement"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "7",
+        "month": "August",
+        "year": "1869"
+      },
+      "title": "",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "image",
+          "content": "1907Deport.png",
+          "description": "Printed article from the year 1907"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "7",
+        "month": "November",
+        "year": "1864"
+      },
+      "title": "Me a test title",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "image",
+          "content": "1907Deport.png",
+          "description": "Printed article from the year 1907"
+        }
+      ],
+      "position": "left"
+    }
+  ]
+}

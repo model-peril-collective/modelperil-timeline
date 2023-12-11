@@ -1,7 +1,7 @@
 import { Artifact } from './index';
 
-export interface Event {
-  artifacts: Artifact[];
+export interface Story {
+  forms: Artifact[];
   date: {
     day?: string;
     month?: string;

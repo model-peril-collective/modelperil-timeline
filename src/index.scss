@@ -2,6 +2,7 @@
 
 html,
 body,
+main,
 div,
 span,
 applet,
@@ -121,6 +122,11 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 24px;
+
+  @media screen and (max-width: 760px) {
+    font-size: 16px;
+  }
 }
 
 /* can uncomment below to see all useable space */
