@@ -5,6 +5,7 @@ import { ComponentFactory } from '../index';
 import styles from './App.module.scss';
 
 const Hero = lazy(() => ComponentFactory.HeroAsync());
+const Timeline = lazy(() => ComponentFactory.TimelineAsync());
 const Year = lazy(() => ComponentFactory.YearAsync());
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
           return <Year key={year} id={year} stories={getYearStories(year)} />;
         })}
       {/* </div> */}
+      <Timeline />
     </div>
   );
 };
