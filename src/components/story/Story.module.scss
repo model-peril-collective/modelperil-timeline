@@ -2,10 +2,8 @@
   align-items: stretch;
   display: flex;
   flex-direction: row;
-  font-size: 18px;
-  font-weight: 100;
   margin-inline: auto;
-  max-width: 1440px;
+  max-width: 1600px;
   min-height: 100dvh;
   width: 100%;
 }
@@ -16,6 +14,7 @@
 }
 
 .date {
+  font-size: 1em;
   left: 0;
   position: sticky;
   top: 10%;
@@ -33,13 +32,13 @@
 }
 
 .title {
-  font-size: 64px;
+  font-size: calc(3 * 1.618em);
   font-weight: 700;
   padding-right: 16px;
 }
 
 .subtitle {
-  font-size: 24px;
+  font-size: 1.618em;
   font-weight: 700;
   padding-left: 16px;
   position: relative;
@@ -56,8 +55,16 @@
 }
 
 .contentWrapper {
-  background-color: gray;
   box-sizing: content-box;
   flex: 1 1 0;
   padding: 80px;
+}
+
+.artifactsContainer {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  padding-left: 48px;
+  margin-top: 24px;
 }

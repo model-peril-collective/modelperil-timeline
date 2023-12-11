@@ -1,3 +1,6 @@
+import clsx from 'clsx';
+import styles from './Artifact.module.scss';
+
 export enum ArtifactType {
   Paragraph = 'paragraph',
   Image = 'image',
@@ -20,7 +23,7 @@ const Artifact = (props: ArtifactProps) => {
   };
 
   return (
-    <div className={className}>
+    <div className={clsx(className, styles.wrapper)}>
       {type === ArtifactType.Image ? (
         <img src={getImgSrc(content)} />
       ) : (
