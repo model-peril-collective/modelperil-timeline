@@ -28,13 +28,12 @@ const Story = (props: StoryProps) => {
 
   return (
     <article ref={storyRef} className={styles.container}>
-      <aside className={styles.dateWrapper}>
-        <span className={styles.date}>{renderDate(date)}</span>
-      </aside>
-      <div className={styles.lineWrapper} />
       <div className={styles.contentWrapper}>
         <header className={styles.heading}>
-          <h2 className={clsx(styles.title, 'scroll-trigger')}>{title}</h2>
+          <div>
+            <span className={styles.date}>{renderDate(date)}</span>
+            <h2 className={clsx(styles.title, 'scroll-trigger')}>{title}</h2>
+          </div>
           {subtitle && <span className={clsx(styles.subtitle, 'scroll-trigger')}>{subtitle}</span>}
         </header>
         <div className={styles.artifactsContainer}>

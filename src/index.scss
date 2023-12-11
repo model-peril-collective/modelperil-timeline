@@ -123,6 +123,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 24px;
+
+  @media screen and (max-width: 760px) {
+    font-size: 16px;
+  }
 }
 
 /* can uncomment below to see all useable space */

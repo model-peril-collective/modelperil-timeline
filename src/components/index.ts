@@ -11,6 +11,7 @@ const ComponentFactory = {
   ArtifactAsync: () => import('./artifact/Artifact'),
   HeroAsync: () => import('./hero/Hero'),
   StoryAsync: () => import('./story/Story'),
+  TimelineAsync: () => import('./timeline/Timeline'),
   YearAsync: () => import('./year/Year'),
 };
 
