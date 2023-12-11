@@ -37,14 +37,16 @@ const Story = (props: StoryProps) => {
           <h2 className={clsx(styles.title, 'scroll-trigger')}>{title}</h2>
           {subtitle && <span className={clsx(styles.subtitle, 'scroll-trigger')}>{subtitle}</span>}
         </header>
-        {artifacts.map((a, i) => (
-          <Artifact
-            key={i}
-            className="scroll-trigger"
-            type={a.type as ArtifactType}
-            content={a.content}
-          />
-        ))}
+        <div className={styles.artifactsContainer}>
+          {artifacts.map((a, i) => (
+            <Artifact
+              key={i}
+              className="scroll-trigger"
+              type={a.type as ArtifactType}
+              content={a.content}
+            />
+          ))}
+        </div>
       </div>
     </article>
   );
