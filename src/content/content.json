@@ -22,26 +22,6 @@
     },
     {
       "date": {
-        "day": "3",
-        "month": "May",
-        "year": "1875"
-      },
-      "title": "Page Act of 1875",
-      "subtitle": "First federal immigration law",
-      "forms": [
-        {
-          "type": "text",
-          "content": "Only 9 US States never had anti-miscegenation laws"
-        },
-        {
-          "type": "popout",
-          "content": "Used to discredit the abolitionist movement"
-        }
-      ],
-      "position": "left"
-    },
-    {
-      "date": {
         "day": "7",
         "month": "August",
         "year": "1869"
@@ -51,24 +31,87 @@
       "forms": [
         {
           "type": "image",
-          "content": "1907Deport.png",
-          "description": "Printed article from the year 1907"
+          "content": "1869-pacific-chivalry.png"
         }
       ],
       "position": "left"
     },
     {
       "date": {
-        "day": "7",
-        "month": "November",
-        "year": "1864"
+        "day": "18",
+        "month": "February",
+        "year": "1871"
       },
-      "title": "Me a test title",
+      "title": "The Chinese Question",
       "subtitle": "",
       "forms": [
         {
           "type": "image",
-          "content": "1907Deport.png",
+          "content": "1871-the-chinese-question.png"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "13",
+        "month": "May",
+        "year": "1875"
+      },
+      "title": "Page Act",
+      "subtitle": "First federal immigration law",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Prevents immigrants considered 'undersirable'"
+        },
+        {
+          "type": "text",
+          "content": "Targeting Asian contract labors and prostitute"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "6",
+        "month": "May",
+        "year": "1882"
+      },
+      "title": "Chinese Exclusion Act: Banned Chinese laborers from immigrating",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "image",
+          "content": "1882-chinese-wall.png"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "15",
+        "month": "February",
+        "year": "1907"
+      },
+      "title": "The Gentlemen's Agreement",
+      "subtitle": "Reducing Japanese immigration",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Between US and Japan"
+        },
+        {
+          "type": "text",
+          "content": "Prohibition of labor immigration from Japan"
+        },
+        {
+          "type": "text",
+          "content": "Pres. Theodore Roosevelt issues an executive order halting immigration from Hawaii, Mexico, and Canada to the U.S. mainland"
+        },
+        {
+          "type": "image",
+          "content": "1907-deport-japanese.png",
           "description": "Printed article from the year 1907"
         }
       ],
