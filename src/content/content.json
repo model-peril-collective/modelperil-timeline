@@ -90,6 +90,278 @@
     },
     {
       "date": {
+        "day": "3",
+        "month": "August",
+        "year": "1882"
+      },
+      "title": "Immigration Act of 1882",
+      "subtitle": "Targeting the impoverished, and people with mental health issues and physical disabilities",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Levied a tax of fity cents on each immigrant"
+        },
+        {
+          "type": "highlight",
+          "content": "and blocked the entry of \"idiots, lunatics, convicts, and person likely to become a public charge\""
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "29",
+        "month": "January",
+        "year": "1883"
+      },
+      "title": "Pace v. Alabama",
+      "subtitle": "US Supreme Court affirmed that Alabama's anti-miscegenation statue was constitutional",
+      "forms": [
+        {
+          "type": "quote",
+          "content": "The \"evil tendency\" was higher in inter-racial relationships, that led to the \"amalgamation of the two races, producing a mongrel population and a degraded civilization\""
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "2",
+        "month": "November",
+        "year": "1883"
+      },
+      "title": "\"The New Colossus\" Sonnet",
+      "subtitle": "Familiar line later used on the Statue of Liberty",
+      "forms": [
+        {
+          "type": "quote",
+          "content": "\"Give me your tired, your poor, your huddled masses.\""
+        },
+        {
+          "type": "image",
+          "content": "1883-new-colossus.png"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "",
+        "month": "",
+        "year": "1885"
+      },
+      "title": "First Koreans arrive in US",
+      "subtitle": "Fleeing political turmoil",
+      "forms": [
+        {
+          "type": "text",
+          "content": ""
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "",
+        "month": "",
+        "year": "1885"
+      },
+      "title": "First group of Japanese contract laborers arrives in Hawaii",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "text",
+          "content": ""
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "",
+        "month": "",
+        "year": "1886"
+      },
+      "title": "Uncle Sam Kicks Out The Chinaman",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "image",
+          "content": "1886-magic-washer.png"
+        },
+        {
+          "type": "quote",
+          "content": "Washing Compound Ad: \"its constant use will not injure the cloths nor turn them yellow\""
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "",
+        "month": "",
+        "year": "1891"
+      },
+      "title": "Immigration Act of 1891",
+      "subtitle": "Focusing on immigration rules and enforcement mechanisms for countries other than China",
+      "forms": [
+        {
+          "type": "text",
+          "content": ""
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "18",
+        "month": "May",
+        "year": "1896"
+      },
+      "title": "Plessy v. Ferguson Supreme Court",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "image",
+          "content": "1896-plessy-v-ferguson.png"
+        },
+        {
+          "type": "text",
+          "content": "Fear of interracial marriage was a major argument used to support racial segregation"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "28",
+        "month": "March",
+        "year": "1898"
+      },
+      "title": "United States v. Wong Kim Ark",
+      "subtitle": "Citizenship birthright",
+      "forms": [
+        {
+          "type": "image",
+          "content": "1898-us-v-wongkimark.png"
+        },
+        {
+          "type": "image",
+          "content": "1898-wongkimark.png"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "",
+        "month": "February",
+        "year": "1903"
+      },
+      "title": "Oxnard, California",
+      "subtitle": "Over 1,200 Mexican and Japanese farm workers organize the first farm worker union",
+      "forms": [
+        {
+          "type": "image",
+          "content": "1903-jmla.png"
+        },
+        {
+          "type": "text",
+          "content": "The Japanese-Mexican Labor Association (JMLA)"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "26",
+        "month": "August",
+        "year": "1903"
+      },
+      "title": "Pensionado Act",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Education program for Filipinos to attend school in the United States."
+        },
+        {
+          "type": "text",
+          "content": "The program has roots in pacification efforts following the Philippine–American War."
+        },
+        {
+          "type": "text",
+          "content": "Students of this scholarship program were known as pensionados."
+        },
+        {
+          "type": "image",
+          "content": "1903-pensionados.png"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "",
+        "month": "May",
+        "year": "1905"
+      },
+      "title": "The Japanese and Korean Exclusion League",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Education program for Filipinos to attend school in the United States."
+        },
+        {
+          "type": "text",
+          "content": "The program has roots in pacification efforts following the Philippine–American War."
+        },
+        {
+          "type": "text",
+          "content": "Students of this scholarship program were known as pensionados."
+        },
+        {
+          "type": "image",
+          "content": "1903-pensionados.png"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "20",
+        "month": "December",
+        "year": "1906"
+      },
+      "title": "",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "text",
+          "content": "First Filipino laborers migrate to the United States"
+        },
+        {
+          "type": "text",
+          "content": "Working on the Hawaiian sugarcane and pineapple plantations"
+        },
+        {
+          "type": "text",
+          "content": "California and Washington asparagus farms"
+        },
+        {
+          "type": "text",
+          "content": "Washington lumber camps"
+        },
+        {
+          "type": "text",
+          "content": "Alaska salmon canneries"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
         "day": "15",
         "month": "February",
         "year": "1907"
@@ -113,6 +385,592 @@
           "type": "image",
           "content": "1907-deport-japanese.png",
           "description": "Printed article from the year 1907"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "4",
+        "month": "September",
+        "year": "1907"
+      },
+      "title": "Demands of white laborers culmindated into a vicious riot",
+      "subtitle": "Bellingham, WA",
+      "forms": [
+        {
+          "type": "text",
+          "content": "500 white working men gathered"
+        },
+        {
+          "type": "text",
+          "content": "Broke into lumber mills and pulled South Asians from work"
+        },
+        {
+          "type": "text",
+          "content": "Entered South Asian bunkhouses, destroying property and stealing valuables"
+        },
+        {
+          "type": "text",
+          "content": "In the approving words of one local newspaper, “wiped off the map”"
+        },
+        {
+          "type": "image",
+          "content": "1907-bellingham.png",
+          "description": "Printed article from the Bellingham Herald"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "",
+        "month": "December",
+        "year": "1907"
+      },
+      "title": "Japanese and Korean Exclusion League renamed Asiatic Exclusion League",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Including Indians and Chinese immigrants in their agenda"
+        },
+        {
+          "type": "text",
+          "content": "Advocating for the “white man's country” and the prohibition of Asian labor immigration"
+        },
+        {
+          "type": "image",
+          "content": "1907-asiatic-exclusion-league.png",
+          "description": ""
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "",
+        "month": "",
+        "year": "1911"
+      },
+      "title": "Nevada became the first state to include Filipinos in their miscegenation law",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Referring to them as “Malays”"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "",
+        "month": "",
+        "year": "1913"
+      },
+      "title": "California Alien Land Law",
+      "subtitle": "Targeting Japanese farmers",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Banning “aliens not eligible for citizenship” from land ownership and long-term leasing in California"
+        },
+        {
+          "type": "image",
+          "content": "1913-alien-land-law.png"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "31",
+        "month": "August",
+        "year": "1919"
+      },
+      "title": "Pablo Manlapit",
+      "subtitle": "Organizes the Filipino Labor Federation to demand higher wages and better working conditions for sakadas",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Sakadas: migrant workers in and from Philippines doing manual labor"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "",
+        "month": "",
+        "year": "1920s"
+      },
+      "title": "",
+      "subtitle": "In California, about 14 men to 1 women for Filipino immigrants",
+      "forms": [
+        {
+          "type": "text",
+          "content": ""
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "",
+        "month": "",
+        "year": "1921"
+      },
+      "title": "Armed white men deport 58 Japanese cantaloupe pickers from Turlock, California",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Similar events occur elsewhere in California and in parts of Oregon and Arizona"
+        },
+        {
+          "type": "highlight",
+          "content": "deport 58 Japanese"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "",
+        "month": "",
+        "year": "1921"
+      },
+      "title": "Armed white men deport 58 Japanese cantaloupe pickers from Turlock, California",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Similar events occur elsewhere in California and in parts of Oregon and Arizona"
+        },
+        {
+          "type": "highlight",
+          "content": "deport 58 Japanese"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "22",
+        "month": "September",
+        "year": "1922"
+      },
+      "title": "Cable Act",
+      "subtitle": "Citizenship only to women married to non-Asian foreigners",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Partially reversing Women's Citizenship Act of 1907"
+        },
+        {
+          "type": "image",
+          "content": "1922-cable-act.png"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "19",
+        "month": "February",
+        "year": "1923"
+      },
+      "title": "United States v. Bhagat Singh Thind",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Asian Indians, despite being able to claim Caucasian status, are not white and therefore ineligible for naturalized citizenship"
+        },
+        {
+          "type": "image",
+          "content": "1923-bhagat-singh-thind.png"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "24",
+        "month": "May",
+        "year": "1924"
+      },
+      "title": "Johnson-Reed Act",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Further restricts immigration of Southern and Eastern Europeans"
+        },
+        {
+          "type": "text",
+          "content": "Severely restricts immigration of Africans"
+        },
+        {
+          "type": "quote",
+          "content": "“to preserve the ideal of American homogeneity.”"
+        },
+        {
+          "type": "image",
+          "content": "1924-johnson-reed.png"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "9",
+        "month": "September",
+        "year": "1924"
+      },
+      "title": "Hanapēpē Massacre",
+      "subtitle": "20 dead",
+      "forms": [
+        {
+          "type": "text",
+          "content": "An inter-ethnic dispute amongst Filipino strike organizers (Ilocano and Visayan) in Hanapēpē, Kauai"
+        },
+        {
+          "type": "text",
+          "content": "Local police arrived with a group of heavily armed deputies"
+        },
+        {
+          "type": "text",
+          "content": "Officers issued warrants of arrest for the two detained Illocanos, causing the collection of Filipino strikers to rally in opposition"
+        },
+        {
+          "type": "text",
+          "content": "16 Filipino laborers and 4 police officers dead"
+        },
+        {
+          "type": "image",
+          "content": "1924-hanapepe-massacre.png"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "9",
+        "month": "August",
+        "year": "1925"
+      },
+      "title": "40,000 members of the Ku Klux Klan march on Washington",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "text",
+          "content": "With 4 million members, the organization is at the height of its popularity"
+        },
+        {
+          "type": "image",
+          "content": "1925-kkk-march.png"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "8-11",
+        "month": "November",
+        "year": "1927"
+      },
+      "title": "Yakima Valley Riots",
+      "subtitle": "Anti-Filipino sentiment in Washington",
+      "forms": [
+        {
+          "type": "extra",
+          "content": "1928 and 1929, Yakima Valley riots were followed by other mob led deportations in the nearby Wenatchee Valley"
+        },
+        {
+          "type": "image",
+          "content": "1927-yakima-riots.png"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "24",
+        "month": "October",
+        "year": "1929"
+      },
+      "title": "Exeter Incident",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Filipino man responded violently to being harassed"
+        },
+        {
+          "type": "text",
+          "content": "A mob over 300 pursued the Filipino man and set fire to a barn where Filipino workers lived."
+        },
+        {
+          "type": "text",
+          "content": "Innocent Filipinos were attacked and forced to flee for safety"
+        },
+        {
+          "type": "image",
+          "content": "1929-exeter.png"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "2",
+        "month": "December",
+        "year": "1929"
+      },
+      "title": "In Watsonville, CA, police raided a boarding house and found two white girls, 16 and 11, sleeping in the same room with Perfecto Bandalan, 25 year old lettuce grower",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Townspeople outraged when they learned Bandalan and 16 year old Esther Schmick were engaged, and they were caring for Esther’s sister Bertha at her mother’s request"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "",
+        "month": "",
+        "year": "1930"
+      },
+      "title": "Most of the Filipinos on the US mainland",
+      "subtitle": "60% worked in agriculture (27,000)",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Given the most backbreaking work: asparagus, celery, lettuce farming"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "1",
+        "month": "January",
+        "year": "1930"
+      },
+      "title": "Filipino, Mexican & White farmworkers go on strike against Imperial Valley’s lettuce growers",
+      "subtitle": "The strikers organized the Agricultural Workers’ Industrial League (AWIL)",
+      "forms": [
+        {
+          "type": "text",
+          "content": ""
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "18",
+        "month": "January",
+        "year": "1930"
+      },
+      "title": "Anti-Filipino Riot",
+      "subtitle": "Near midnight on Jan 18th",
+      "forms": [
+        {
+          "type": "text",
+          "content": "500 white men gathered at a Filipino dance club in Watsonville"
+        },
+        {
+          "type": "text",
+          "content": "Filipino owned club often packed with Filipino men dancing and mingling with white women"
+        },
+        {
+          "type": "text",
+          "content": "Mob came with weapons to take women out and burn the hall"
+        },
+        {
+          "type": "image",
+          "content": "1930-riot-1.png"
+        },
+        {
+          "type": "text",
+          "content": "Owner opened fire as the mob refused to leave"
+        },
+        {
+          "type": "text",
+          "content": "Police broke up fight"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "20",
+        "month": "January",
+        "year": "1930"
+      },
+      "title": "Anti-Filipino Riot",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Filipino men and white men met at Pajaro River bridge to settle the score"
+        },
+        {
+          "type": "text",
+          "content": "Group of Hispanic men arrived and sided with white men"
+        },
+        {
+          "type": "text",
+          "content": "Hunting parties organized and run like a “military” operation formed"
+        },
+        {
+          "type": "text",
+          "content": "Dragged Filipinos from their homes and beat them"
+        },
+        {
+          "type": "text",
+          "content": "22 were dragged and almost beaten to death at a labor camp"
+        },
+        {
+          "type": "text",
+          "content": "Attacked Filipinos at ranches"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "23",
+        "month": "January",
+        "year": "1930"
+      },
+      "title": "Shots fired into a home which struck 22 year old Fermin Tobera in the heart as he was hiding with 11 others",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "image",
+          "content": "1930-riot-2.png"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "",
+        "month": "",
+        "year": "1930"
+      },
+      "title": "Anti-Filipino Riot Aftermath",
+      "subtitle": "No one faced justice for the murder",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Violence spread to Stockton, San Fran, San Jose and other cities"
+        },
+        {
+          "type": "text",
+          "content": "Filipino club blown up in Stockton and blast was blamed on the Filipinos themselves"
+        },
+        {
+          "type": "text",
+          "content": "Many Filipinos fled the country "
+        },
+        {
+          "type": "text",
+          "content": "Protests in Philippines in solidarity"
+        },
+        {
+          "type": "text",
+          "content": "Body of Fermin sent to Philippines where he is considered a martyr, a symbol of the fight for independence and equality"
+        },
+        {
+          "type": "text",
+          "content": "8 young men were arrested who were part of the riot, but none were directly linked to Fermin’s murder"
+        },
+        {
+          "type": "text",
+          "content": "7 were convicted of rioting but either received probation or 30 days in jail"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "5",
+        "month": "April",
+        "year": "1933"
+      },
+      "title": "Roldan v. Los Angeles County",
+      "subtitle": "Outlawed Filipino-white intermarriage in California",
+      "forms": [
+        {
+          "type": "text",
+          "content": ""
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "24",
+        "month": "March",
+        "year": "1934"
+      },
+      "title": "The Tydings-McDuffie Act",
+      "subtitle": "Outlawed Filipino-white intermarriage in California",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Set a timeline for Philippine independence"
+        },
+        {
+          "type": "text",
+          "content": "Reclassified Filipinos from nationals to aliens for immigration purposes"
+        },
+        {
+          "type": "text",
+          "content": "Set an annual immigration quota from the Philippines at 50"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "",
+        "month": "",
+        "year": "1935"
+      },
+      "title": "Filipino Repatriation Act",
+      "subtitle": "Outlawed Filipino-white intermarriage in California",
+      "forms": [
+        {
+          "type": "text",
+          "content": "Offered Filipino immigrants free passage back to the Philippines if they promise to never return to the United States"
+        },
+        {
+          "type": "text",
+          "content": "Due to the small number of returnees, it became known as the “Philippine Flop”"
+        }
+      ],
+      "position": "left"
+    },
+    {
+      "date": {
+        "day": "4",
+        "month": "September",
+        "year": "1935"
+      },
+      "title": "California apologized to Filipinos and Filipino Americans",
+      "subtitle": "",
+      "forms": [
+        {
+          "type": "text",
+          "content": ""
         }
       ],
       "position": "left"
