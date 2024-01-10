@@ -1,3 +1,23 @@
 .wrapper {
+  display: flex;
+  flex-direction: column;
   font-size: 1em;
+  margin: 0 auto;
+  width: 75%;
+
+  img {
+    max-height: 60dvh;
+  }
+
+  p {
+    text-align: left;
+  }
+}
+
+.imageLeft {
+  align-self: flex-start;
+}
+
+.imageRight {
+  align-self: flex-end;
 }

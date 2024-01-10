@@ -10,26 +10,28 @@ export enum ArtifactType {
 }
 
 export interface ArtifactProps {
-  className: string;
+  className?: string;
   content: string;
   type: ArtifactType;
 }
 
 const Artifact = (props: ArtifactProps) => {
-  const { className, content, type } = props;
+  const { className = '', content, type } = props;
 
   const getImgSrc = (src: string) => {
     return require(`../../content/timelineImages/${src}`);
   };
 
+  const getImgPosition = () => {
+    return Math.random() < 0.5 ? styles.imageLeft : styles.imageRight;
+  };
+
   return (
     <div className={clsx(className, styles.wrapper)}>
       {type === ArtifactType.Image ? (
-        <img src={getImgSrc(content)} />
+        <img className={getImgPosition()} src={getImgSrc(content)} />
       ) : (
-        <div>
-          <p>{content}</p>
-        </div>
+        <p>{content}</p>
       )}
     </div>
   );
