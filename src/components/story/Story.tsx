@@ -30,7 +30,7 @@ const Story = (props: StoryProps) => {
     <article ref={storyRef} className={styles.container}>
       <div className={styles.contentWrapper}>
         <header className={styles.heading}>
-          <div>
+          <div className={clsx(styles.titleWrapper)}>
             <span className={styles.date}>{renderDate(date)}</span>
             <h2 className={clsx(styles.title, 'scroll-trigger')}>{title}</h2>
           </div>
@@ -38,12 +38,7 @@ const Story = (props: StoryProps) => {
         </header>
         <div className={styles.artifactsContainer}>
           {artifacts.map((a, i) => (
-            <Artifact
-              key={i}
-              className="scroll-trigger"
-              type={a.type as ArtifactType}
-              content={a.content}
-            />
+            <Artifact key={i} type={a.type as ArtifactType} content={a.content} />
           ))}
         </div>
       </div>
