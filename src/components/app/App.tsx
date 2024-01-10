@@ -28,12 +28,12 @@ const App = () => {
       <Suspense>
         <Hero />
       </Suspense>
-      {/* <div className={styles.content}> */}
-      {years.length > 0 &&
-        years.map((year) => {
-          return <Year key={year} id={year} stories={getYearStories(year)} />;
-        })}
-      {/* </div> */}
+      <div className={styles.yearWrapper}>
+        {years.length > 0 &&
+          years.map((year) => {
+            return <Year key={year} id={year} stories={getYearStories(year)} />;
+          })}
+      </div>
       <Timeline />
     </div>
   );

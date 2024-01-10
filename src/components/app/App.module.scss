@@ -8,3 +8,9 @@
   height: 100%;
   width: 100%;
 }
+
+.yearWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 300px;
+}

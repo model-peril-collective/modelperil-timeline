@@ -1,19 +1,18 @@
 .container {
   align-items: stretch;
-  background-color: gray;
-  outline: 6px solid blueviolet;
+  background: conic-gradient(from 90deg at 2px 2px, #0000 90deg, #366 0) 0 0/100px 100px,
+    conic-gradient(from 90deg at 1px 1px, #0000 90deg, #366 0) 0 0/20px 20px;
   display: flex;
   flex-direction: row;
-  margin-inline: auto;
+  margin: 0 auto;
   max-width: 1400px;
-  min-height: 100dvh;
   width: 100%;
 }
 
 .contentWrapper {
   box-sizing: content-box;
   flex: 1 1 0;
-  padding: 80px;
+  padding: 48px 80px;
 }
 
 .heading {
@@ -26,11 +25,6 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-
-.dateWrapper {
-  padding: 80px 0;
-  width: 300px;
 }
 
 .date {
@@ -47,6 +41,7 @@
   font-weight: 700;
   line-height: 1;
   padding-right: 16px;
+  text-shadow: 8px 6px #ffff0050;
 }
 
 .subtitle {
