@@ -413,11 +413,20 @@
         "year": "1907"
       },
       "title": "Japanese and Korean Exclusion League renamed Asiatic Exclusion League",
-      "subtitle": "Advocating for the “white man's country”",
+      "subtitle": "",
       "forms": [
         {
           "type": "text",
-          "content": ""
+          "content": "Including Indians and Chinese immigrants in their agenda"
+        },
+        {
+          "type": "text",
+          "content": "Advocating for the “white man's country” and the prohibition of Asian labor immigration"
+        },
+        {
+          "type": "image",
+          "content": "1907-asiatic-exclusion-league.png",
+          "description": ""
         }
       ],
       "position": "left"
@@ -593,11 +602,7 @@
         },
         {
           "type": "image",
-          "content": "1924-dumping-ground.png"
-        },
-        {
-          "type": "image",
-          "content": "1924-3-percent.png"
+          "content": "1924-johnson-reed.png"
         }
       ],
       "position": "left"
@@ -741,11 +746,11 @@
         "year": "1930"
       },
       "title": "Filipino, Mexican & White farmworkers go on strike against Imperial Valley’s lettuce growers",
-      "subtitle": "",
+      "subtitle": "The strikers organized the Agricultural Workers’ Industrial League (AWIL)",
       "forms": [
         {
-          "type": "extra",
-          "content": "The strikers organized the Agricultural Workers’ Industrial League (AWIL)"
+          "type": "text",
+          "content": ""
         }
       ],
       "position": "left"
