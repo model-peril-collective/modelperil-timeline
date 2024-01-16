@@ -7,6 +7,7 @@ import styles from './Story.module.scss';
 const Artifact = lazy(() => ComponentFactory.ArtifactAsync());
 
 export interface StoryProps {
+  id?: string;
   artifacts: ArtifactModel[];
   date: Date;
   subtitle?: string;
@@ -14,7 +15,7 @@ export interface StoryProps {
 }
 
 const Story = (props: StoryProps) => {
-  const { artifacts, date, subtitle, title } = props;
+  const { artifacts, date, id, subtitle, title } = props;
   const storyRef = createRef<HTMLDivElement>();
 
   const renderDate = (date: Date) => {
@@ -27,7 +28,7 @@ const Story = (props: StoryProps) => {
   };
 
   return (
-    <article ref={storyRef} className={styles.container}>
+    <article ref={storyRef} id={id} className={styles.container}>
       <div className={styles.contentWrapper}>
         <header className={styles.heading}>
           <div className={clsx(styles.titleWrapper)}>
