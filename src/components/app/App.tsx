@@ -1,4 +1,5 @@
-import { Suspense, lazy, useEffect, useState } from 'react';
+import { Fragment, Suspense, lazy, useEffect, useState } from 'react';
+import Xarrow from 'react-xarrows';
 import contentJson from '../../content/content.json';
 import { Story } from '../../models';
 import { ComponentFactory } from '../index';
@@ -30,9 +31,21 @@ const App = () => {
       </Suspense>
       <div className={styles.yearWrapper}>
         {years.length > 0 &&
-          years.map((year) => {
-            return <Year key={year} id={year} stories={getYearStories(year)} />;
-          })}
+          years.map((year, i) => (
+            <Fragment key={i}>
+              <Year id={year} stories={getYearStories(year)} />
+              {i !== 0 && (
+                <Xarrow
+                  animateDrawing
+                  color="#ffff00"
+                  startAnchor="bottom"
+                  endAnchor="top"
+                  start={'year-' + years[i - 1]}
+                  end={'year-' + year}
+                />
+              )}
+            </Fragment>
+          ))}
       </div>
       <Timeline />
     </div>
