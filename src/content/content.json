@@ -512,26 +512,6 @@
     },
     {
       "date": {
-        "day": "",
-        "month": "",
-        "year": "1921"
-      },
-      "title": "Armed white men deport 58 Japanese cantaloupe pickers from Turlock, California",
-      "subtitle": "",
-      "forms": [
-        {
-          "type": "text",
-          "content": "Similar events occur elsewhere in California and in parts of Oregon and Arizona"
-        },
-        {
-          "type": "highlight",
-          "content": "deport 58 Japanese"
-        }
-      ],
-      "position": "left"
-    },
-    {
-      "date": {
         "day": "22",
         "month": "September",
         "year": "1922"
@@ -724,9 +704,13 @@
         "month": "",
         "year": "1930"
       },
-      "title": "Most of the Filipinos on the US mainland",
-      "subtitle": "60% worked in agriculture (27,000)",
+      "title": "Most of the Filipinos on the US mainland worked in agriculture",
+      "subtitle": "",
       "forms": [
+        {
+          "type": "extra",
+          "content": "60% (27,000)"
+        },
         {
           "type": "text",
           "content": "Given the most backbreaking work: asparagus, celery, lettuce farming"
@@ -740,12 +724,12 @@
         "month": "January",
         "year": "1930"
       },
-      "title": "Filipino, Mexican & White farmworkers go on strike against Imperial Valley’s lettuce growers",
+      "title": "Filipino, Mexican & White farmworkers go on strike against Imperial Valley's lettuce growers",
       "subtitle": "",
       "forms": [
         {
           "type": "extra",
-          "content": "The strikers organized the Agricultural Workers’ Industrial League (AWIL)"
+          "content": "The strikers organized the Agricultural Workers' Industrial League (AWIL)"
         }
       ],
       "position": "left"
