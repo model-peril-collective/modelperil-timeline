@@ -9,4 +9,5 @@ export interface Story {
   };
   subtitle?: string;
   title: string;
+  ignore?: boolean;
 }

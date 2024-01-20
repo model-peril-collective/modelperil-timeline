@@ -36,7 +36,7 @@ const App = () => {
               <Year id={year} stories={getYearStories(year)} />
               {i !== 0 && (
                 <Xarrow
-                  animateDrawing
+                  animateDrawing={true}
                   color="#ffff00"
                   startAnchor="bottom"
                   endAnchor="top"
