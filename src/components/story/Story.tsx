@@ -33,7 +33,7 @@ const Story = (props: StoryProps) => {
         <header className={styles.heading}>
           <div className={clsx(styles.titleWrapper)}>
             <span className={styles.date}>{renderDate(date)}</span>
-            <h2 className={clsx(styles.title, 'scroll-trigger')}>{title}</h2>
+            <div className={clsx(styles.title, 'scroll-trigger')}>{title}</div>
           </div>
           {subtitle && <span className={clsx(styles.subtitle, 'scroll-trigger')}>{subtitle}</span>}
         </header>
