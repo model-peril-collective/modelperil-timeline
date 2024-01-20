@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import { Fragment, lazy, Suspense } from 'react';
 import Xarrow from 'react-xarrows';
 import { Story as StoryModel } from '../../models';
 import { ComponentFactory } from '..';
@@ -14,29 +14,34 @@ export interface YearProps {
 const Year = (props: YearProps) => {
   const { stories, id } = props;
 
+  const getStoryId = (i: number) => {
+    return 'year-' + id.toString() + '-' + i;
+  };
+
   return (
     <section id={'year-' + id.toString()} className={styles.sectionWrapper}>
       <Suspense>
         {stories.map((story, i) => (
-          <>
-            <div id={'year-' + id.toString() + '-' + i + '-pre'} style={{ position: 'absolute', left: 0, width: 0, height: 0, top: 0 }} />
+          <Fragment key={i}>
             <Story
-              id={'year-' + id.toString() + '-' + i}
+              id={getStoryId(i)}
               key={i}
               title={story.title}
               subtitle={story.subtitle}
               artifacts={story.forms}
               date={story.date}
             />
-            <Xarrow
-              animateDrawing
-              color="#ffff00"
-              start={'year-' + id.toString() + '-' + i + '-pre'}
-              startAnchor="bottom"
-              end={'year-' + id.toString() + '-' + i}
-              endAnchor="top"
-            />
-          </>
+            {i !== 0 && (
+              <Xarrow
+                animateDrawing
+                color="#ffff00"
+                startAnchor="bottom"
+                endAnchor="top"
+                start={getStoryId(i - 1)}
+                end={getStoryId(i)}
+              />
+            )}
+          </Fragment>
         ))}
       </Suspense>
     </section>
