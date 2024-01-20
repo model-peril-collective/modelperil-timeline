@@ -7,6 +7,7 @@ import styles from './Story.module.scss';
 const Artifact = lazy(() => ComponentFactory.ArtifactAsync());
 
 export interface StoryProps {
+  id?: string;
   artifacts: ArtifactModel[];
   date: Date;
   subtitle?: string;
@@ -14,7 +15,7 @@ export interface StoryProps {
 }
 
 const Story = (props: StoryProps) => {
-  const { artifacts, date, subtitle, title } = props;
+  const { artifacts, date, id, subtitle, title } = props;
   const storyRef = createRef<HTMLDivElement>();
 
   const renderDate = (date: Date) => {
@@ -27,23 +28,18 @@ const Story = (props: StoryProps) => {
   };
 
   return (
-    <article ref={storyRef} className={styles.container}>
+    <article ref={storyRef} id={id} className={styles.container}>
       <div className={styles.contentWrapper}>
         <header className={styles.heading}>
-          <div>
+          <div className={clsx(styles.titleWrapper)}>
             <span className={styles.date}>{renderDate(date)}</span>
-            <h2 className={clsx(styles.title, 'scroll-trigger')}>{title}</h2>
+            <div className={clsx(styles.title, 'scroll-trigger')}>{title}</div>
           </div>
           {subtitle && <span className={clsx(styles.subtitle, 'scroll-trigger')}>{subtitle}</span>}
         </header>
         <div className={styles.artifactsContainer}>
           {artifacts.map((a, i) => (
-            <Artifact
-              key={i}
-              className="scroll-trigger"
-              type={a.type as ArtifactType}
-              content={a.content}
-            />
+            <Artifact key={i} type={a.type as ArtifactType} content={a.content} />
           ))}
         </div>
       </div>

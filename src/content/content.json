@@ -130,7 +130,7 @@
         "month": "November",
         "year": "1883"
       },
-      "title": "\"The New Colossus\" Sonnet",
+      "title": "“The New Colossus” Sonnet",
       "subtitle": "Familiar line later used on the Statue of Liberty",
       "forms": [
         {
@@ -270,7 +270,8 @@
           "content": "The Japanese-Mexican Labor Association (JMLA)"
         }
       ],
-      "position": "left"
+      "position": "left",
+      "ignore": true
     },
     {
       "date": {

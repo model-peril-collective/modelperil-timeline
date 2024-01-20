@@ -1,16 +1,33 @@
 .container {
   align-items: stretch;
+  background-color: var(--colorPrimary);
+  // background: conic-gradient(from 90deg at 2px 2px, #0000 90deg, #366 0) 0 0/100px 100px,
+  //   conic-gradient(from 90deg at 1px 1px, #0000 90deg, #366 0) 0 0/20px 20px;
   display: flex;
   flex-direction: row;
-  margin-inline: auto;
-  max-width: 1440px;
-  min-height: 100dvh;
+  margin: 0 auto;
+  max-width: inherit;
   width: 100%;
 }
 
-.dateWrapper {
-  padding: 80px 0;
-  width: 300px;
+.contentWrapper {
+  box-sizing: border-box;
+  flex: 1 1 0;
+  padding: 16px;
+  max-width: 100%;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .date {
@@ -22,46 +39,37 @@
   width: 8px;
 }
 
-.heading {
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-}
-
 .title {
-  font-size: calc(3 * 1.618em);
+  font-size: 2em;
   font-weight: 700;
+  line-height: 1;
   padding-right: 16px;
+  text-shadow: 8px 6px #ffff0050;
 }
 
 .subtitle {
-  font-size: 1.618em;
+  font-size: 1.5em;
   font-weight: 700;
-  padding-left: 16px;
+  line-height: 1.2;
+  padding-left: 24px;
   position: relative;
 
   &::after {
     content: '';
-    top: -8px;
-    left: -4px;
+    top: -2px;
+    bottom: -2px;
+    left: 4px;
     width: 4px;
-    height: 90%;
     background-color: var(--colorSecondary);
     position: absolute;
   }
-}
-
-.contentWrapper {
-  box-sizing: content-box;
-  flex: 1 1 0;
-  padding: 80px;
 }
 
 .artifactsContainer {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  gap: 34px;
-  padding-left: 48px;
+  gap: 16px;
   margin-top: 24px;
+  width: 100%;
 }

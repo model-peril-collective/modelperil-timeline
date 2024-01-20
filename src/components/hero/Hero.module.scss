@@ -1,7 +1,7 @@
 .wrapper {
   align-items: center;
   background: linear-gradient(var(--colorPrimary), var(--colorNeutral500));
-  box-sizing: content-box;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   height: 100dvh;
