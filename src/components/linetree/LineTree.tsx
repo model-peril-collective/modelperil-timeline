@@ -12,7 +12,7 @@ const LineTree = (props: LineTreeProps) => {
 
   useEffect(() => {
     const drawLine = () => {
-      new LeaderLine(start.current, LeaderLine.pointAnchor(end.current, { x: '10%', y: '100%' }), { path: 'grid', startSocket: 'left', endSocket: 'top', color: 'black', size: 2});
+      new LeaderLine(start.current, LeaderLine.pointAnchor(end.current, { x: '10%', y: '100%' }), { path: 'grid', startSocket: 'left', endSocket: 'top', color: 'black', size: 2 });
     };
 
     const timer = setInterval(() => {
@@ -25,7 +25,7 @@ const LineTree = (props: LineTreeProps) => {
     return () => {
       timer && clearInterval(timer);
     }
-  }, [])
+  }, [start, end])
 
   useEffect(() => {
     setTimeout(() => {
