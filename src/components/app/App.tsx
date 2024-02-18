@@ -1,11 +1,11 @@
 import { Fragment, Suspense, lazy, useEffect, useState } from 'react';
-import Xarrow from 'react-xarrows';
 import contentJson from '../../content/content.json';
 import { Story } from '../../models';
 import { ComponentFactory } from '../index';
 import styles from './App.module.scss';
 
 const Hero = lazy(() => ComponentFactory.HeroAsync());
+const LineTree = lazy(() => ComponentFactory.LineTreeAsync());
 const Timeline = lazy(() => ComponentFactory.TimelineAsync());
 const Year = lazy(() => ComponentFactory.YearAsync());
 
@@ -35,11 +35,8 @@ const App = () => {
             <Fragment key={i}>
               <Year id={year} stories={getYearStories(year)} />
               {i !== 0 && (
-                <Xarrow
-                  animateDrawing={true}
-                  color="#ffff00"
-                  startAnchor="bottom"
-                  endAnchor="top"
+                <LineTree
+                  // color="#ff00ff"
                   start={'year-' + years[i - 1]}
                   end={'year-' + year}
                 />
