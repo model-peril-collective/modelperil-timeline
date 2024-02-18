@@ -1,41 +1,23 @@
-import LeaderLine from 'leader-line-new';
-import { useEffect, useRef } from 'react';
+import Xarrow, { xarrowPropsType } from 'react-xarrows';
 
-export interface LineTreeProps {
-  start: any;
-  end: any;
-}
+export type LineTreeProps = xarrowPropsType
 
 const LineTree = (props: LineTreeProps) => {
-  const { start, end } = props;
-  const line: any = useRef();
+  const { color = '#ffff00', end, start } = props;
 
-  useEffect(() => {
-    const drawLine = () => {
-      new LeaderLine(start.current, LeaderLine.pointAnchor(end.current, { x: '10%', y: '100%' }), { path: 'grid', startSocket: 'left', endSocket: 'top', color: 'black', size: 2 });
-    };
-
-    const timer = setInterval(() => {
-      if (start.current) {
-        clearInterval(timer);
-        drawLine();
-      }
-    }, 5);
-
-    return () => {
-      timer && clearInterval(timer);
-    }
-  }, [start, end])
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (line.current && end?.current) {
-        line.current.position();
-      }
-    }, 0);
-  });
-
-  return null;
+  return (
+    <div>
+      <Xarrow
+        animateDrawing
+        showHead={false}
+        color={color}
+        startAnchor="bottom"
+        endAnchor="top"
+        start={start}
+        end={end}
+      />
+    </div>
+  )
 };
 
 export default LineTree;
