@@ -1,8 +1,12 @@
 import clsx from 'clsx';
-import { createRef, lazy } from 'react';
+import { createRef, lazy, useEffect } from 'react';
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 import { Artifact as ArtifactModel, Date } from '../../models';
 import { ComponentFactory, ArtifactType } from '../index';
 import styles from './Story.module.scss';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Artifact = lazy(() => ComponentFactory.ArtifactAsync());
 
@@ -26,6 +30,23 @@ const Story = (props: StoryProps) => {
 
     return content;
   };
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from('.scroll-trigger', {
+        scrollTrigger: {
+          trigger: '.scroll-trigger',
+          start: 'top bottom-=200',
+          end: 'top center',
+          scrub: true,
+          markers: true,
+        },
+        x: 300,
+        autoAlpha: 0,
+      });
+    }, storyRef); // <- selector scoping
+    return () => ctx.revert();
+  }, [storyRef]);
 
   return (
     <article ref={storyRef} id={id} className={styles.container}>
