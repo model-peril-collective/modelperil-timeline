@@ -20,7 +20,7 @@ const Year = (props: YearProps) => {
   return (
     <section id={'year-' + id.toString()} className={styles.sectionWrapper}>
       <span className={styles.sectionTitle}>{id.toString()}</span>
-      <div>
+      <div className={styles.storyWrapper}>
         {stories.map((story, i) => (
           <Story
             id={getStoryId(i)}
