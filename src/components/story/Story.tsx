@@ -52,12 +52,14 @@ const Story = (props: StoryProps) => {
   };
 
   const renderDate = (date: Date) => {
-    let content = date.year;
+    if (!date.month && !date.day) return null;
 
-    if (date.month && date.month.length > 0) content += `, ${date.month}`;
-    if (date.day && date.day.length > 0) content += ` ${date.day}`;
+    let result = '';
 
-    return content;
+    if (date.month && date.month.length > 0) result = date.month;
+    if (date.day && date.day.length > 0) result += ` ${date.day}`;
+
+    return <span ref={addtoRefs} className={styles.date}>{result}</span>;
   };
 
   return (
@@ -65,7 +67,7 @@ const Story = (props: StoryProps) => {
       <div className={styles.contentWrapper}>
         <header className={styles.heading}>
           <div className={clsx(styles.titleWrapper)}>
-            <span ref={addtoRefs} className={styles.date}>{renderDate(date)}</span>
+            {renderDate(date)}
             {title && <div ref={addtoRefs} className={clsx(styles.title)}>{title}</div>}
           </div>
           {subtitle && <span ref={addtoRefs} className={clsx(styles.subtitle)}>{subtitle}</span>}

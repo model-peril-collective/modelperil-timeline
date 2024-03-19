@@ -5,9 +5,14 @@
 }
 
 .sectionTitle {
-  position: sticky;
   height: fit-content;
-  padding: 16px 4px;
-  top: 42px;
   left: 0;
+  padding: 16px;
+  position: sticky;
+  top: 42px;
+  width: 54px;
+}
+
+.storyWrapper {
+  flex: 1 1 0;
 }
