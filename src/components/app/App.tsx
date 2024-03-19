@@ -1,11 +1,10 @@
-import { Fragment, Suspense, lazy, useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import contentJson from '../../content/content.json';
 import { Story } from '../../models';
 import { ComponentFactory } from '../index';
 import styles from './App.module.scss';
 
 const Hero = lazy(() => ComponentFactory.HeroAsync());
-const LineTree = lazy(() => ComponentFactory.LineTreeAsync());
 const Timeline = lazy(() => ComponentFactory.TimelineAsync());
 const Year = lazy(() => ComponentFactory.YearAsync());
 
@@ -29,21 +28,15 @@ const App = () => {
       <Suspense>
         <Hero />
       </Suspense>
-      <div className={styles.yearWrapper}>
-        {years.length > 0 &&
-          years.map((year, i) => (
-            <Fragment key={i}>
-              <Year id={year} stories={getYearStories(year)} />
-              {i !== 0 && (
-                <LineTree
-                  // color="#ff00ff"
-                  start={'year-' + years[i - 1]}
-                  end={'year-' + year}
-                />
-              )}
-            </Fragment>
-          ))}
+      <div id="stories" className={styles.yearWrapper}>
+        <Suspense fallback={<p>Loading stories...</p>}>
+          {years.length > 0 &&
+            years.map((year, i) => <Year key={i} id={year} stories={getYearStories(year)} />)}
+        </Suspense>
       </div>
+      <Suspense>
+        <Hero />
+      </Suspense>
       <Timeline />
     </div>
   );

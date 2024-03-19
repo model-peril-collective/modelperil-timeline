@@ -1,3 +1,4 @@
+import { LegacyRef, forwardRef } from 'react';
 import clsx from 'clsx';
 import styles from './Artifact.module.scss';
 
@@ -15,7 +16,7 @@ export interface ArtifactProps {
   type: ArtifactType;
 }
 
-const Artifact = (props: ArtifactProps) => {
+const Artifact = forwardRef(function Artifact(props: ArtifactProps, ref: LegacyRef<HTMLDivElement> | undefined) {
   const { className = '', content, type } = props;
 
   const getImgSrc = (src: string) => {
@@ -27,7 +28,7 @@ const Artifact = (props: ArtifactProps) => {
   };
 
   return (
-    <div className={clsx(className, styles.wrapper)}>
+    <div ref={ref} className={clsx(className, styles.wrapper)}>
       {type === ArtifactType.Image ? (
         <img className={getImgPosition()} src={getImgSrc(content)} />
       ) : (
@@ -35,6 +36,28 @@ const Artifact = (props: ArtifactProps) => {
       )}
     </div>
   );
-};
+});
+
+// const Artifact = (props: ArtifactProps) => {
+//   const { className = '', content, type } = props;
+
+//   const getImgSrc = (src: string) => {
+//     return require(`../../content/timelineImages/${src}`);
+//   };
+
+//   const getImgPosition = () => {
+//     return Math.random() < 0.5 ? styles.imageLeft : styles.imageRight;
+//   };
+
+//   return (
+//     <div className={clsx(className, styles.wrapper)}>
+//       {type === ArtifactType.Image ? (
+//         <img className={getImgPosition()} src={getImgSrc(content)} />
+//       ) : (
+//         <p>{content}</p>
+//       )}
+//     </div>
+//   );
+// };
 
 export default Artifact;

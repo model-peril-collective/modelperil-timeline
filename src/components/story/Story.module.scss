@@ -7,7 +7,7 @@
   flex-direction: row;
   margin: 0 auto;
   max-width: inherit;
-  min-height: 150vh;
+  min-height: 100vh;
   position: relative;
   width: 100%;
 }
@@ -19,9 +19,11 @@
   height: min-content;
   padding: 16px;
   position: sticky;
-  top: 16px;
+  top: 42px;
   left: 0;
-  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  width: auto;
 }
 
 .heading {
