@@ -1,6 +1,13 @@
 .sectionWrapper {
   display: flex;
-  flex-direction: column;
-  gap: 300px;
   max-width: 100%;
+  position: relative;
+}
+
+.sectionTitle {
+  position: sticky;
+  height: fit-content;
+  padding: 16px 4px;
+  top: 42px;
+  left: 0;
 }

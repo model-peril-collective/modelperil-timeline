@@ -1,10 +1,8 @@
-import { Fragment, lazy, Suspense } from 'react';
+import { lazy } from 'react';
 import { Story as StoryModel } from '../../models';
 import { ComponentFactory } from '..';
 import styles from './Year.module.scss';
-import { Xwrapper } from 'react-xarrows';
 
-const LineTree = lazy(() => ComponentFactory.LineTreeAsync());
 const Story = lazy(() => ComponentFactory.StoryAsync());
 
 export interface YearProps {
@@ -21,29 +19,19 @@ const Year = (props: YearProps) => {
 
   return (
     <section id={'year-' + id.toString()} className={styles.sectionWrapper}>
-      <Xwrapper>
-        <Suspense>
-          {stories.map((story, i) => (
-            <Fragment key={i}>
-              <Story
-                id={getStoryId(i)}
-                key={i}
-                title={story.title}
-                subtitle={story.subtitle}
-                artifacts={story.forms}
-                date={story.date}
-              />
-              {i !== 0 && (
-                <LineTree
-                  color="#00ffff"
-                  start={getStoryId(i - 1)}
-                  end={getStoryId(i)}
-                />
-              )}
-            </Fragment>
-          ))}
-        </Suspense>
-      </Xwrapper>
+      <span className={styles.sectionTitle}>{id.toString()}</span>
+      <div>
+        {stories.map((story, i) => (
+          <Story
+            id={getStoryId(i)}
+            key={i}
+            title={story.title}
+            subtitle={story.subtitle}
+            artifacts={story.forms}
+            date={story.date}
+          />
+        ))}
+      </div>
     </section>
   );
 };
