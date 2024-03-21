@@ -5,7 +5,8 @@
 }
 
 .sectionTitle {
-  height: fit-content;
+  // aspect-ratio: 1;
+  height: min-content;
   left: 0;
   padding: 16px;
   position: sticky;
@@ -14,5 +15,8 @@
 }
 
 .storyWrapper {
+  display: flex;
+  flex-direction: column;
   flex: 1 1 0;
+  gap: 150px;
 }
