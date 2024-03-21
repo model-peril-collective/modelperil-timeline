@@ -16,7 +16,10 @@ export interface ArtifactProps {
   type: ArtifactType;
 }
 
-const Artifact = forwardRef(function Artifact(props: ArtifactProps, ref: LegacyRef<HTMLDivElement> | undefined) {
+const Artifact = forwardRef(function Artifact(
+  props: ArtifactProps,
+  ref: LegacyRef<HTMLDivElement> | undefined
+) {
   const { className = '', content, type } = props;
 
   const getImgSrc = (src: string) => {
