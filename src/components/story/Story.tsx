@@ -23,6 +23,12 @@ const Story = (props: StoryProps) => {
   const storyRef = useRef<HTMLDivElement>(null);
   const animationRefs = useRef<HTMLDivElement[]>([]);
 
+  const addtoRefs = (el: HTMLDivElement) => {
+    if (el && !animationRefs.current.includes(el)) {
+      animationRefs.current.push(el);
+    }
+  };
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       if (animationRefs?.current.length > 0) {
@@ -30,8 +36,8 @@ const Story = (props: StoryProps) => {
           gsap.from(ref, {
             scrollTrigger: {
               trigger: ref,
-              start: 'top bottom-=200',
-              end: 'top center',
+              start: 'top bottom-=5%',
+              end: 'top center+=10%',
               scrub: true,
               // markers: true,
             },
@@ -43,13 +49,7 @@ const Story = (props: StoryProps) => {
 
     }, storyRef); // <- selector scoping
     return () => ctx.revert();
-  }, []);
-
-  const addtoRefs = (el: HTMLDivElement) => {
-    if (el && !animationRefs.current.includes(el)) {
-      animationRefs.current.push(el);
-    }
-  };
+  }, [animationRefs]);
 
   const renderDate = (date: Date) => {
     if (!date.month && !date.day) return null;
