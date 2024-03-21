@@ -1,6 +1,6 @@
 import Xarrow, { xarrowPropsType } from 'react-xarrows';
 
-export type LineTreeProps = xarrowPropsType
+export type LineTreeProps = xarrowPropsType;
 
 const LineTree = (props: LineTreeProps) => {
   const { color = '#ffff00', end, start } = props;
@@ -17,7 +17,7 @@ const LineTree = (props: LineTreeProps) => {
         end={end}
       />
     </div>
-  )
+  );
 };
 
 export default LineTree;

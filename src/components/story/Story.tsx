@@ -44,9 +44,8 @@ const Story = (props: StoryProps) => {
             x: '50px',
             autoAlpha: 0,
           });
-        })
+        });
       }
-
     }, storyRef); // <- selector scoping
     return () => ctx.revert();
   }, [animationRefs]);
@@ -59,7 +58,11 @@ const Story = (props: StoryProps) => {
     if (date.month && date.month.length > 0) result = date.month;
     if (date.day && date.day.length > 0) result += ` ${date.day}`;
 
-    return <span ref={addtoRefs} className={styles.date}>{result}</span>;
+    return (
+      <span ref={addtoRefs} className={styles.date}>
+        {result}
+      </span>
+    );
   };
 
   return (
@@ -68,18 +71,21 @@ const Story = (props: StoryProps) => {
         <header className={styles.heading}>
           <div className={clsx(styles.titleWrapper)}>
             {renderDate(date)}
-            {title && <div ref={addtoRefs} className={clsx(styles.title)}>{title}</div>}
+            {title && (
+              <div ref={addtoRefs} className={clsx(styles.title)}>
+                {title}
+              </div>
+            )}
           </div>
-          {subtitle && <span ref={addtoRefs} className={clsx(styles.subtitle)}>{subtitle}</span>}
+          {subtitle && (
+            <span ref={addtoRefs} className={clsx(styles.subtitle)}>
+              {subtitle}
+            </span>
+          )}
         </header>
         <div className={styles.artifactsContainer}>
           {artifacts.map((a, i) => (
-            <Artifact
-              key={i}
-              ref={addtoRefs}
-              type={a.type as ArtifactType}
-              content={a.content}
-            />
+            <Artifact key={i} ref={addtoRefs} type={a.type as ArtifactType} content={a.content} />
           ))}
         </div>
       </div>
