@@ -5,7 +5,7 @@ import { ComponentFactory } from '../index';
 import styles from './App.module.scss';
 
 const Hero = lazy(() => ComponentFactory.HeroAsync());
-const Timeline = lazy(() => ComponentFactory.TimelineAsync());
+// const Timeline = lazy(() => ComponentFactory.TimelineAsync());
 const Year = lazy(() => ComponentFactory.YearAsync());
 
 const App = () => {
@@ -37,7 +37,7 @@ const App = () => {
       <Suspense>
         <Hero />
       </Suspense>
-      <Timeline />
+      {/* <Timeline /> */}
     </div>
   );
 };
