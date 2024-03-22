@@ -8,6 +8,7 @@
   margin: 0 auto;
   max-width: inherit;
   min-height: 100vh;
+  // padding-bottom: var(--storyGap);
   position: relative;
   width: 100%;
 }
@@ -69,7 +70,7 @@
     bottom: -2px;
     left: 4px;
     width: 4px;
-    background-color: var(--colorSecondary);
+    background-color: #ffff0050;
     position: absolute;
   }
 }

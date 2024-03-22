@@ -1,22 +1,48 @@
 .sectionWrapper {
   display: flex;
   max-width: 100%;
-  position: relative;
 }
 
-.sectionTitle {
-  // aspect-ratio: 1;
+.yearTrack {
+  --trackHeight: 100%;
+  position: relative;
+  width: 54px;
+
+  &::before {
+    background-color: var(--colorSecondary);
+    border-radius: 2px;
+    content: '';
+    height: calc(var(--trackHeight) - 16px);
+    left: 50%;
+    position: absolute;
+    top: 16px;
+    transform: translateX(-50%);
+    width: 4px;
+  }
+}
+
+.yearTitle {
+  aspect-ratio: 1;
+  background-color: var(--colorSecondary);
+  border-radius: 50%;
+  color: var(--colorPrimary);
+  display: inline-block;
   height: min-content;
   left: 0;
-  padding: 16px;
+  padding: 16px 0;
   position: sticky;
+  text-align: center;
   top: 42px;
-  width: 54px;
+  width: 100%;
 }
 
 .storyWrapper {
+  --storyGap: 150px;
+
   display: flex;
   flex-direction: column;
   flex: 1 1 0;
-  gap: 150px;
+  gap: var(--storyGap);
+  padding-bottom: var(--storyGap);
+  position: relative;
 }
