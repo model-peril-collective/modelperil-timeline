@@ -1,7 +1,7 @@
 {
   "name": "modelperil-timeline",
   "version": "0.1.0",
-  "homepage": "https://model-peril-collective.github.io/modelperil-timeline/",
+  "homepage": "https://model-peril-collective.github.io/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "5.16.5",
