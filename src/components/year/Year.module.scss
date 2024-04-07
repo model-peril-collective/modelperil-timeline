@@ -10,18 +10,17 @@
 }
 
 .yearTrack {
-  --trackHeight: 100%;
   position: relative;
   width: 54px;
 
   &::before {
     background-color: var(--colorSecondary);
-    border-radius: 2px;
+    border-radius: 0;
     content: '';
-    height: calc(var(--trackHeight) - 16px);
+    height: 100%;
     left: 50%;
     position: absolute;
-    top: 16px;
+    top: 0;
     transform: translateX(-50%);
     width: 4px;
   }

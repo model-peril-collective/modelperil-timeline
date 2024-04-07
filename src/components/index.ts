@@ -9,6 +9,7 @@ import { ArtifactType } from './artifact/Artifact';
 const ComponentFactory = {
   ArticleAsync: () => import(/* webpackChunkName: "Article" */ './article/Article'),
   ArtifactAsync: () => import(/* webpackChunkName: "Artifact" */ './artifact/Artifact'),
+  FooterAsync: () => import(/* webpackChunkName: "Footer" */ './footer/Footer'),
   HeroAsync: () => import(/* webpackChunkName: "Hero" */ './hero/Hero'),
   LineTreeAsync: () => import(/* webpackChunkName: "LineTree" */ './linetree/LineTree'),
   StoryAsync: () => import(/* webpackChunkName: "Story" */ './story/Story'),

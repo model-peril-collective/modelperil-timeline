@@ -41,26 +41,4 @@ const Artifact = forwardRef(function Artifact(
   );
 });
 
-// const Artifact = (props: ArtifactProps) => {
-//   const { className = '', content, type } = props;
-
-//   const getImgSrc = (src: string) => {
-//     return require(`../../content/timelineImages/${src}`);
-//   };
-
-//   const getImgPosition = () => {
-//     return Math.random() < 0.5 ? styles.imageLeft : styles.imageRight;
-//   };
-
-//   return (
-//     <div className={clsx(className, styles.wrapper)}>
-//       {type === ArtifactType.Image ? (
-//         <img className={getImgPosition()} src={getImgSrc(content)} />
-//       ) : (
-//         <p>{content}</p>
-//       )}
-//     </div>
-//   );
-// };
-
 export default Artifact;

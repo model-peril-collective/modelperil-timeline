@@ -4,15 +4,15 @@ import { Story } from '../../models';
 import { ComponentFactory } from '../index';
 import styles from './App.module.scss';
 
+const Footer = lazy(() => ComponentFactory.FooterAsync());
 const Hero = lazy(() => ComponentFactory.HeroAsync());
-// const Timeline = lazy(() => ComponentFactory.TimelineAsync());
 const Year = lazy(() => ComponentFactory.YearAsync());
 
 const App = () => {
   const [years, setYears] = useState<string[]>([]);
 
   const getYearStories = (year: string) =>
-    contentJson.stories.filter((value) => year === value.date.year);
+    contentJson.stories.filter((story) => year === story.date.year && !story.ignore);
 
   useEffect(() => {
     const unique = new Set<string>();
@@ -35,9 +35,8 @@ const App = () => {
         </Suspense>
       </div>
       <Suspense>
-        <Hero />
+        <Footer />
       </Suspense>
-      {/* <Timeline /> */}
     </div>
   );
 };
