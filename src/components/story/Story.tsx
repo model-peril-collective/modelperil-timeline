@@ -38,7 +38,7 @@ const Story = (props: StoryProps) => {
               trigger: ref,
               start: 'top bottom-=5%',
               end: 'top center+=10%',
-              scrub: true,
+              scrub: 0.5,
               // markers: true,
             },
             x: '50px',
