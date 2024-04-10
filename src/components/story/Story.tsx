@@ -11,9 +11,9 @@ gsap.registerPlugin(ScrollTrigger);
 const Artifact = lazy(() => ComponentFactory.ArtifactAsync());
 
 export interface StoryProps {
-  id?: string;
   artifacts: ArtifactModel[];
   date: Date;
+  id?: string;
   subtitle?: string;
   title: string;
 }

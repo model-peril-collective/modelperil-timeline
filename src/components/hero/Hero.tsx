@@ -14,7 +14,7 @@ const Hero = () => {
     <header ref={ref} className={clsx(styles.wrapper, inView && styles.visible)}>
       <img className={styles.logo} src={logo} alt="Model Peril logo" />
       <h1 className={styles.title}>
-        <span className={styles.name}>Model Peril</span> Timeline
+        <span className={styles.name}>A Model Minority Yellow Peril Timeline</span>
       </h1>
     </header>
   );

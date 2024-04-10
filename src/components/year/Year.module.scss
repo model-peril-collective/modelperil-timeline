@@ -1,4 +1,6 @@
 .sectionWrapper {
+  --yearHeight: 100%;
+
   display: flex;
   gap: 24px;
   max-width: 800px;
@@ -6,6 +8,10 @@
 
   @media (max-width: 600px) {
     gap: 8px;
+  }
+
+  &:last-child {
+    --yearHeight: 100%;
   }
 }
 
@@ -17,7 +23,7 @@
     background-color: var(--colorSecondary);
     border-radius: 0;
     content: '';
-    height: 100%;
+    height: var(--yearHeight);
     left: 50%;
     position: absolute;
     top: 0;

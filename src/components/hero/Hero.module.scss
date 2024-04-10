@@ -24,6 +24,10 @@
   width: 80%;
   filter: drop-shadow(5px 5px 5px var(--colorNeutral500));
   -webkit-filter: drop-shadow(5px 5px 5px var(--colorNeutral500));
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 }
 
 .title {
