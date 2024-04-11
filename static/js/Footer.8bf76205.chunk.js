@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmodelperil_timeline=self.webpackChunkmodelperil_timeline||[]).push([[798],{443:(e,l,r)=>{r.r(l),r.d(l,{default:()=>t});const s="Footer_wrapper__x0arE";var i=r(579);const t=()=>(0,i.jsx)("footer",{className:s,children:(0,i.jsx)("div",{})})}}]);
-//# sourceMappingURL=Footer.8bf76205.chunk.js.map
