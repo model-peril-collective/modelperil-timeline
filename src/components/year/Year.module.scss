@@ -33,6 +33,8 @@
 }
 
 .yearTitle {
+  --stickyHeight: 160px;
+
   aspect-ratio: 1;
   background-color: var(--colorSecondary);
   border-radius: 50%;
@@ -43,7 +45,7 @@
   padding: 16px 0;
   position: sticky;
   text-align: center;
-  top: 64px;
+  top: var(--stickyHeight);
   width: 100%;
 }
 

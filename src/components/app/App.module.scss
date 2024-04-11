@@ -1,23 +1,30 @@
-// .app {
-// display: flex;
-// flex-direction: column;
-// height: auto;
-// min-height: 100vh;
-// position: relative;
-// text-align: center;
-// height: 100%;
-// width: 100%;
-// max-width: 100vw;
-// }
+.app {
+  position: relative;
+}
 
 .yearWrapper {
   align-items: center;
   display: flex;
   flex-direction: column;
   padding-inline: 32px;
-  // gap: 100px;
 
   @media (max-width: 600px) {
     padding-inline: 8px 0;
   }
+}
+
+.sticky {
+  bottom: 48px;
+  position: fixed;
+  right: 32px;
+  z-index: 1;
+
+  @media (max-width: 600px) {
+    position: sticky;
+    top: 0;
+  }
+}
+
+.hide {
+  display: none !important;
 }

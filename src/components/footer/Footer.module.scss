@@ -1,5 +1,64 @@
 .wrapper {
-  // border-top: 2px solid var(--colorSecondary);
-  height: 80px;
+  align-items: center;
+  background: linear-gradient(var(--colorPrimary), var(--colorNeutral500));
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  justify-content: space-between;
+  padding: 80px 16px 24px;
   width: 100%;
+}
+
+.socialContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 64px;
+  width: 100%;
+}
+
+.socialList {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, 80px);
+}
+
+.socialLink {
+  a {
+    // background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    // border: 2px solid rgba(255, 255, 255, 0.618);
+    // box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.37);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 25%;
+    cursor: pointer;
+    display: flex;
+    padding: 16px;
+    height: 80px;
+    width: 80px;
+
+    &:hover {
+      background: #f0f;
+    }
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.footerCreds {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-top: 24px;
+  width: 100%;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
 }

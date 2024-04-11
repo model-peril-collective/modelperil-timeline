@@ -1,23 +1,23 @@
 import clsx from 'clsx';
-import { useInView } from 'react-intersection-observer';
+import { ForwardedRef, HTMLAttributes, forwardRef } from 'react';
 import styles from './Hero.module.scss';
 
 import logo from '../../assets/logo.png';
 
-const Hero = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.3,
-    triggerOnce: true,
-  });
+export type HeroProps = HTMLAttributes<HTMLDivElement>
 
+const Hero = forwardRef(function Hero(
+  props: HeroProps,
+  ref: ForwardedRef<HTMLElement>
+) {
   return (
-    <header ref={ref} className={clsx(styles.wrapper, inView && styles.visible)}>
+    <header ref={ref} className={clsx(styles.wrapper, styles.visible)}>
       <img className={styles.logo} src={logo} alt="Model Peril logo" />
       <h1 className={styles.title}>
         <span className={styles.name}>A Model Minority Yellow Peril Timeline</span>
       </h1>
     </header>
   );
-};
+});
 
 export default Hero;

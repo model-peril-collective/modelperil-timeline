@@ -14,8 +14,6 @@ const Year = (props: YearProps) => {
   const { id, stories } = props;
   const yearRef = useRef<HTMLDivElement>(null);
 
-  console.log(id, stories.length);
-
   const getStoryId = (i: number) => {
     return 'year-' + id.toString() + '-' + i;
   };

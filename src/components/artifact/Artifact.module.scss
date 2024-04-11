@@ -8,8 +8,12 @@
 
   img {
     object-fit: contain;
-    max-height: 60dvh;
+    max-height: 40dvh;
     max-width: 100%;
+
+    @media (max-width: 600px) {
+      max-height: 50dvh;
+    }
   }
 
   p {
