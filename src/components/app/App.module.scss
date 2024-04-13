@@ -13,13 +13,16 @@
   }
 }
 
-.sticky {
+.stickyPlayer {
+  background: var(--colorWhite);
+  box-shadow: 0 12px 24px 18px var(--colorPrimary);
   bottom: 48px;
   position: fixed;
   right: 32px;
   z-index: 1;
 
   @media (max-width: 600px) {
+    background: var(--colorPrimary);
     position: sticky;
     top: 0;
   }

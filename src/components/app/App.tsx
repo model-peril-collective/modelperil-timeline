@@ -42,7 +42,7 @@ const App = () => {
         <Hero ref={heroRef} />
         <Spotify
           compact
-          className={clsx(styles.sticky, (footerInView || heroInView) && styles.hide)}
+          className={clsx(styles.stickyPlayer, (footerInView || heroInView) && styles.hide)}
           link="https://open.spotify.com/album/5pviUBTXTliGqQrNU4rc6X?si=ZZgd404fSKuXbYBcqYCh5w"
         />
         <div id="stories" className={styles.yearWrapper}>
