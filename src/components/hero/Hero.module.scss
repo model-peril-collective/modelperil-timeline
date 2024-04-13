@@ -4,7 +4,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 88dvh;
+  height: 100lvh;
   justify-content: center;
   padding: 36px 0;
   transition: opacity 3s;
@@ -42,8 +42,4 @@
 
 .name {
   display: none;
-  /* background: linear-gradient(90deg, var(--colorWhite), var(--colorSecondary));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
 }
