@@ -12,7 +12,12 @@ const Spotify = lazy(() => ComponentFactory.SpotifyAsync());
 const Year = lazy(() => ComponentFactory.YearAsync());
 
 const App = () => {
-  const { ref, inView } = useInView({
+  const [footerRef, footerInView] = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
+
+  const [heroRef, heroInView] = useInView({
     /* Optional options */
     threshold: 0,
   });
@@ -31,18 +36,13 @@ const App = () => {
     setYears(sortedYears);
   }, []);
 
-  useEffect(() => {
-    console.log(inView);
-  }, [inView])
-
   return (
     <div className={styles.app}>
       <main className={styles.mainContent}>
-        <Hero />
+        <Hero ref={heroRef} />
         <Spotify
-          className={clsx(styles.sticky, inView && styles.hide)}
           compact
-          glassBg
+          className={clsx(styles.sticky, (footerInView || heroInView) && styles.hide)}
           link="https://open.spotify.com/album/5pviUBTXTliGqQrNU4rc6X?si=ZZgd404fSKuXbYBcqYCh5w"
         />
         <div id="stories" className={styles.yearWrapper}>
@@ -52,7 +52,7 @@ const App = () => {
           </Suspense>
         </div>
       </main>
-      <div ref={ref}>
+      <div ref={footerRef}>
         <Footer />
       </div>
     </div>

@@ -7,7 +7,6 @@ interface SpotifyProps extends HTMLAttributes<HTMLIFrameElement> {
   glassBg?: boolean;
   link?: string;
   profile?: boolean;
-  withBorder?: boolean;
 }
 
 const Spotify = (props: SpotifyProps) => {
@@ -17,7 +16,6 @@ const Spotify = (props: SpotifyProps) => {
     glassBg = false,
     link,
     profile = false,
-    withBorder = false
   } = props;
 
   let url;
@@ -29,7 +27,7 @@ const Spotify = (props: SpotifyProps) => {
   const profilePathname = '/artist/7qolDRFBtdsZiSzWqazZdm';
 
   return (
-    <div className={clsx(styles.container, glassBg && styles.glassBg, withBorder && styles.withBorder, className)}>
+    <div className={clsx(styles.container, glassBg && styles.glassBg, className)}>
       <iframe
         src={`https://open.spotify.com/embed${profile ? profilePathname : url?.pathname}?utm_source=generator&theme=0`}
         width="100%"

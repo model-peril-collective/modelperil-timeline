@@ -1,11 +1,14 @@
 .container {
+  background: var(--colorWhite);
   border-radius: 12px;
+  box-shadow: 0 12px 24px 18px var(--colorPrimary);
   display: flex;
   justify-content: center;
   padding: 16px;
   width: 400px;
 
   @media (max-width: 600px) {
+    background-color: var(--colorPrimary);
     border-radius: 0;
     padding: 16px 24px;
     width: 100%;
@@ -13,16 +16,11 @@
 }
 
 .glassBg {
-  background: var(--colorWhite);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+  border-color: rgba(255, 255, 255, 0.3);
+  border-style: solid;
+  border-width: 1px;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-
-  @media (max-width: 600px) {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  }
-}
-
-.withBorder {
-  border: 1px solid rgba(255, 255, 255, 0.18);
 }
