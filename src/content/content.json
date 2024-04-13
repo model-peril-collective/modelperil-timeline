@@ -63,11 +63,11 @@
       "forms": [
         {
           "type": "text",
-          "content": "Prevents immigrants considered 'undersirable'"
+          "content": "Prevented immigrants considered 'undersirable'"
         },
         {
           "type": "text",
-          "content": "Targeting Asian contract labors and prostitute"
+          "content": "Targeted Asian contract labors and prostitute"
         }
       ],
       "position": "left"
@@ -95,7 +95,7 @@
         "year": "1882"
       },
       "title": "Immigration Act of 1882",
-      "subtitle": "Targeting the impoverished, and people with mental health issues and physical disabilities",
+      "subtitle": "Targeted the impoverished, and people with mental health issues and physical disabilities",
       "forms": [
         {
           "type": "text",
@@ -103,7 +103,7 @@
         },
         {
           "type": "highlight",
-          "content": "and blocked the entry of \"idiots, lunatics, convicts, and person likely to become a public charge\""
+          "content": "And blocked the entry of “idiots, lunatics, convicts, and person likely to become a public charge”"
         }
       ],
       "position": "left"
@@ -119,7 +119,7 @@
       "forms": [
         {
           "type": "quote",
-          "content": "The \"evil tendency\" was higher in inter-racial relationships, that led to the \"amalgamation of the two races, producing a mongrel population and a degraded civilization\""
+          "content": "The “evil tendency” was higher in inter-racial relationships, that led to the “amalgamation of the two races, producing a mongrel population and a degraded civilization”"
         }
       ],
       "position": "left"
@@ -135,7 +135,7 @@
       "forms": [
         {
           "type": "quote",
-          "content": "\"Give me your tired, your poor, your huddled masses.\""
+          "content": "“Give me your tired, your poor, your huddled masses.”"
         },
         {
           "type": "image",
@@ -150,7 +150,7 @@
         "month": "",
         "year": "1885"
       },
-      "title": "First Koreans arrive in US",
+      "title": "First Koreans arrived in US",
       "subtitle": "Fleeing political turmoil",
       "forms": [
         {
@@ -166,7 +166,7 @@
         "month": "",
         "year": "1885"
       },
-      "title": "First group of Japanese contract laborers arrives in Hawaii",
+      "title": "First group of Japanese contract laborers arrived in Hawaii",
       "subtitle": "",
       "forms": [
         {
@@ -191,7 +191,7 @@
         },
         {
           "type": "quote",
-          "content": "Washing Compound Ad: \"its constant use will not injure the cloths nor turn them yellow\""
+          "content": "Washing Compound Ad: “its constant use will not injure the cloths nor turn them yellow”"
         }
       ],
       "position": "left"
@@ -203,7 +203,7 @@
         "year": "1891"
       },
       "title": "Immigration Act of 1891",
-      "subtitle": "Focusing on immigration rules and enforcement mechanisms for countries other than China",
+      "subtitle": "Focused on immigration rules and enforcement mechanisms for countries other than China",
       "forms": [
         {
           "type": "text",
@@ -258,8 +258,8 @@
         "month": "February",
         "year": "1903"
       },
-      "title": "Oxnard, California [MAKE ENTIRE ARTICLE EXTRA]",
-      "subtitle": "Over 1,200 Mexican and Japanese farm workers organize the first farm worker union",
+      "title": "Oxnard, California [CURRENTLY IGNORED]",
+      "subtitle": "Over 1,200 Mexican and Japanese farm workers organized the first farm worker union",
       "forms": [
         {
           "type": "image",
@@ -284,7 +284,7 @@
       "forms": [
         {
           "type": "text",
-          "content": "Education program for Filipinos to attend school in the United States."
+          "content": "An education program for Filipinos to attend school in the United States."
         },
         {
           "type": "text",
@@ -308,11 +308,11 @@
         "year": "1905"
       },
       "title": "The Japanese and Korean Exclusion League",
-      "subtitle": "Forms as an increasing number of Japanese and Koreans migrate from Hawaii",
+      "subtitle": "Formed as an increasing number of Japanese and Koreans migrated from Hawaii",
       "forms": [
         {
           "type": "extra",
-          "content": "San Francisco Board of Supervisors orders the segregation of all Chinese, Japanese, and Korean children into the city's Oriental School"
+          "content": "San Francisco Board of Supervisors ordered the segregation of all Chinese, Japanese, and Korean children into the city's Oriental School"
         }
       ],
       "position": "left"
@@ -323,24 +323,28 @@
         "month": "December",
         "year": "1906"
       },
-      "title": "First Filipino laborers migrate to the United States",
+      "title": "First Filipino laborers migrated to the United States",
       "subtitle": "",
       "forms": [
         {
           "type": "text",
-          "content": "Working on the Hawaiian sugarcane and pineapple plantations"
+          "content": "Worked on:"
         },
         {
           "type": "text",
-          "content": "California and Washington asparagus farms"
+          "content": "- Hawaiian sugarcane and pineapple plantationss"
         },
         {
           "type": "text",
-          "content": "Washington lumber camps"
+          "content": "- California and Washington asparagus farms"
         },
         {
           "type": "text",
-          "content": "Alaska salmon canneries"
+          "content": "- Washington lumber camps"
+        },
+        {
+          "type": "text",
+          "content": "- Alaska salmon canneries"
         }
       ],
       "position": "left"
@@ -352,7 +356,7 @@
         "year": "1907"
       },
       "title": "The Gentlemen's Agreement",
-      "subtitle": "Reducing Japanese immigration",
+      "subtitle": "Reduced Japanese immigration",
       "forms": [
         {
           "type": "text",
@@ -364,7 +368,11 @@
         },
         {
           "type": "text",
-          "content": "Pres. Theodore Roosevelt issues an executive order halting immigration from Hawaii, Mexico, and Canada to the U.S. mainland"
+          "content": "Pres. Theodore Roosevelt issued an executive order"
+        },
+        {
+          "type": "text",
+          "content": "Halting immigration from Hawaii, Mexico, and Canada to the U.S. mainland"
         },
         {
           "type": "image",
@@ -380,7 +388,7 @@
         "month": "September",
         "year": "1907"
       },
-      "title": "Demands of white laborers culmindated into a vicious riot",
+      "title": "Demands of white laborers culminated into a vicious riot",
       "subtitle": "Bellingham, WA",
       "forms": [
         {
@@ -414,7 +422,7 @@
         "year": "1907"
       },
       "title": "Japanese and Korean Exclusion League renamed Asiatic Exclusion League",
-      "subtitle": "Advocating for the “white man's country”",
+      "subtitle": "Advocated for the “white man's country”",
       "forms": [
         {
           "type": "text",
@@ -446,11 +454,11 @@
         "year": "1913"
       },
       "title": "California Alien Land Law",
-      "subtitle": "Targeting Japanese farmers",
+      "subtitle": "Targeted Japanese farmers",
       "forms": [
         {
           "type": "text",
-          "content": "Banning “aliens not eligible for citizenship” from land ownership and long-term leasing in California"
+          "content": "Banned “aliens not eligible for citizenship” from land ownership and long-term leasing in California"
         },
         {
           "type": "image",
@@ -466,7 +474,7 @@
         "year": "1919"
       },
       "title": "Pablo Manlapit",
-      "subtitle": "Organizes the Filipino Labor Federation to demand higher wages and better working conditions for sakadas",
+      "subtitle": "Organized the Filipino Labor Federation to demand higher wages and better working conditions for sakadas",
       "forms": [
         {
           "type": "text",
@@ -481,8 +489,8 @@
         "month": "",
         "year": "1920"
       },
-      "title": "",
-      "subtitle": "In California, about 14 men to 1 women for Filipino immigrants",
+      "title": "In California, about 14 men to 1 women for Filipino immigrants",
+      "subtitle": "",
       "forms": [
         {
           "type": "text",
@@ -498,15 +506,11 @@
         "year": "1921"
       },
       "title": "Armed white men deport 58 Japanese cantaloupe pickers from Turlock, California",
-      "subtitle": "",
+      "subtitle": "Similar events occur elsewhere in California and in parts of Oregon and Arizona",
       "forms": [
         {
           "type": "text",
-          "content": "Similar events occur elsewhere in California and in parts of Oregon and Arizona"
-        },
-        {
-          "type": "highlight",
-          "content": "deport 58 Japanese"
+          "content": ""
         }
       ],
       "position": "left"
@@ -562,11 +566,11 @@
       "forms": [
         {
           "type": "text",
-          "content": "Further restricts immigration of Southern and Eastern Europeans"
+          "content": "Further restricted immigration of Southern and Eastern Europeans"
         },
         {
           "type": "text",
-          "content": "Severely restricts immigration of Africans"
+          "content": "Severely restricted immigration of Africans"
         },
         {
           "type": "quote",
@@ -621,7 +625,7 @@
         "month": "August",
         "year": "1925"
       },
-      "title": "40,000 members of the Ku Klux Klan march on Washington",
+      "title": "40,000 members of the Ku Klux Klan marched on Washington",
       "subtitle": "",
       "forms": [
         {
@@ -689,12 +693,16 @@
         "month": "December",
         "year": "1929"
       },
-      "title": "In Watsonville, CA, police raided a boarding house and found two white girls, 16 and 11, sleeping in the same room with Perfecto Bandalan, 25 year old lettuce grower",
-      "subtitle": "",
+      "title": "In Watsonville, CA, police raided a boarding house",
+      "subtitle": "Found two white girls, 16 and 11, sleeping in the same room with Perfecto Bandalan, 25 year old lettuce grower",
       "forms": [
         {
           "type": "text",
-          "content": "Townspeople outraged when they learned Bandalan and 16 year old Esther Schmick were engaged, and they were caring for Esther’s sister Bertha at her mother’s request"
+          "content": "Townspeople outraged when they learned Bandalan and 16 year old Esther Schmick were engaged"
+        },
+        {
+          "type": "text",
+          "content": "They were caring for Esther’s sister Bertha at her mother’s request"
         }
       ],
       "position": "left"
@@ -842,7 +850,7 @@
         },
         {
           "type": "text",
-          "content": "Many Filipinos fled the country "
+          "content": "Many Filipinos fled the country"
         },
         {
           "type": "text",
