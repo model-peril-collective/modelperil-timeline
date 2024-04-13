@@ -36,12 +36,12 @@ const Story = (props: StoryProps) => {
           gsap.from(ref, {
             scrollTrigger: {
               trigger: ref,
-              start: 'top bottom-=5%',
-              end: 'top center+=10%',
+              start: 'top bottom-=15%',
+              end: 'top center',
               scrub: 0.5,
               // markers: true,
             },
-            x: '50px',
+            x: '-50px',
             autoAlpha: 0,
           });
         });
@@ -65,6 +65,37 @@ const Story = (props: StoryProps) => {
     );
   };
 
+  const renderArtifacts = (list: ArtifactModel[]) => {
+    const hasImage = list.some(story => story.type === ArtifactType.Image);
+
+    if (hasImage) {
+      const textList: ArtifactModel[] = [];
+      const imgList: ArtifactModel[] = [];
+
+      list.forEach((a) => {
+        if (a.type !== ArtifactType.Image) textList.push(a);
+        else imgList.push(a);
+      });
+
+      return (
+        <>
+          {textList.map((a, i) => (
+            <Artifact key={i} ref={addtoRefs} type={a.type as ArtifactType} content={a.content} />
+          ))}
+          <div ref={addtoRefs} className={styles.imgList}>
+            {imgList.map((a, i) => (
+              <Artifact key={i} type={ArtifactType.Image} content={a.content} />
+            ))}
+          </div>
+        </>
+      );
+    } else {
+      return list.map((a, i) => (
+        <Artifact key={i} ref={addtoRefs} type={a.type as ArtifactType} content={a.content} />
+      ));
+    }
+  };
+
   return (
     <article ref={storyRef} id={id} className={styles.container}>
       <div className={styles.contentWrapper}>
@@ -84,9 +115,7 @@ const Story = (props: StoryProps) => {
           )}
         </header>
         <div className={styles.artifactsContainer}>
-          {artifacts.map((a, i) => (
-            <Artifact key={i} ref={addtoRefs} type={a.type as ArtifactType} content={a.content} />
-          ))}
+          {renderArtifacts(artifacts)}
         </div>
       </div>
     </article>

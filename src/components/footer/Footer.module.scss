@@ -3,7 +3,7 @@
   background: linear-gradient(var(--colorPrimary), var(--colorNeutral500));
   display: grid;
   height: 100lvh;
-  padding: 80px 0 24px;
+  padding: 80px 16px 24px;
   width: 100%;
 }
 
@@ -23,6 +23,10 @@
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(4, 80px);
+
+  @media (max-width: 600px) {
+    gap: 8px;
+  }
 }
 
 .socialLink {
