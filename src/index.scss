@@ -116,9 +116,15 @@ html {
   --colorYouTube: #ff0000;
   --colorInstagram: #ff0069;
 
+  --stickyHeight: 120px;
+
   background-color: var(--colorPrimary);
   color: var(--colorNeutral100);
   overflow-x: hidden;
+
+  @media (max-width: 600px) {
+    --stickyHeight: 160px;
+  }
 }
 
 body {
@@ -127,6 +133,10 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 18px;
+  font-size: 32px;
   margin: 0;
+
+  @media (max-width: 600px) {
+    font-size: 18px;
+  }
 }

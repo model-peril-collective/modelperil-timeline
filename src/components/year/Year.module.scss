@@ -17,7 +17,11 @@
 
 .yearTrack {
   position: relative;
-  width: 54px;
+  width: 80px;
+
+  @media (max-width: 600px) {
+    width: 52px;
+  }
 
   &::before {
     background-color: var(--colorSecondary);
@@ -28,19 +32,22 @@
     position: absolute;
     top: 0;
     transform: translateX(-50%);
-    width: 4px;
+    width: 6px;
+
+    @media (max-width: 600px) {
+      width: 4px;
+    }
   }
 }
 
 .yearTitle {
-  --stickyHeight: 160px;
-
+  align-items: center;
   aspect-ratio: 1;
   background-color: var(--colorSecondary);
   border-radius: 50%;
   color: var(--colorPrimary);
-  display: inline-block;
-  height: min-content;
+  display: flex;
+  justify-content: center;
   left: 0;
   padding: 16px 0;
   position: sticky;
