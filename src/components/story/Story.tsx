@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { lazy, useEffect, useRef } from 'react';
+import { CSSProperties, lazy, useEffect, useRef } from 'react';
 import { Artifact as ArtifactModel, Date } from '../../models';
 import { ComponentFactory, ArtifactType } from '../index';
 import styles from './Story.module.scss';
@@ -14,13 +14,15 @@ export interface StoryProps {
   artifacts: ArtifactModel[];
   date: Date;
   id?: string;
+  isLast?: boolean;
   subtitle?: string;
   title: string;
 }
 
 const Story = (props: StoryProps) => {
-  const { artifacts, date, id, subtitle, title } = props;
+  const { artifacts, date, id, isLast = false, subtitle, title } = props;
   const storyRef = useRef<HTMLDivElement>(null);
+  const headingRef = useRef<HTMLDivElement>(null);
   const animationRefs = useRef<HTMLDivElement[]>([]);
 
   const addtoRefs = (el: HTMLDivElement) => {
@@ -36,17 +38,17 @@ const Story = (props: StoryProps) => {
           gsap.from(ref, {
             scrollTrigger: {
               trigger: ref,
-              start: 'top bottom-=15%',
-              end: 'top center',
+              start: 'top center+=25%',
+              end: 'top center-=5%',
               scrub: 0.5,
               // markers: true,
             },
-            x: '-50px',
+            x: '-120px',
             autoAlpha: 0,
           });
         });
       }
-    }, storyRef); // <- selector scoping
+    }, storyRef);
     return () => ctx.revert();
   }, [animationRefs]);
 
@@ -66,7 +68,7 @@ const Story = (props: StoryProps) => {
   };
 
   const renderArtifacts = (list: ArtifactModel[]) => {
-    const hasImage = list.some(story => story.type === ArtifactType.Image);
+    const hasImage = list.some((story) => story.type === ArtifactType.Image);
 
     if (hasImage) {
       const textList: ArtifactModel[] = [];
@@ -82,9 +84,9 @@ const Story = (props: StoryProps) => {
           {textList.map((a, i) => (
             <Artifact key={i} ref={addtoRefs} type={a.type as ArtifactType} content={a.content} />
           ))}
-          <div ref={addtoRefs} className={styles.imgList}>
+          <div className={styles.imgList}>
             {imgList.map((a, i) => (
-              <Artifact key={i} type={ArtifactType.Image} content={a.content} />
+              <Artifact key={i} ref={addtoRefs} type={ArtifactType.Image} content={a.content} />
             ))}
           </div>
         </>
@@ -97,9 +99,9 @@ const Story = (props: StoryProps) => {
   };
 
   return (
-    <article ref={storyRef} id={id} className={styles.container}>
+    <article ref={storyRef} id={id} className={clsx(styles.container, isLast && styles.lastStory)}>
       <div className={styles.contentWrapper}>
-        <header className={styles.heading}>
+        <header ref={headingRef} className={styles.heading}>
           <div className={clsx(styles.titleWrapper)}>
             {renderDate(date)}
             {title && (
@@ -114,7 +116,10 @@ const Story = (props: StoryProps) => {
             </span>
           )}
         </header>
-        <div className={styles.artifactsContainer}>
+        <div
+          className={styles.artifactsContainer}
+          style={{ '--headingPosition': `${headingRef.current?.offsetHeight}px` } as CSSProperties}
+        >
           {renderArtifacts(artifacts)}
         </div>
       </div>

@@ -1,6 +1,4 @@
 .sectionWrapper {
-  --yearHeight: 100%;
-
   display: flex;
   gap: 24px;
   max-width: 800px;
@@ -8,10 +6,6 @@
 
   @media (max-width: 600px) {
     gap: 0;
-  }
-
-  &:last-child {
-    --yearHeight: 100%;
   }
 }
 
@@ -49,7 +43,6 @@
   display: flex;
   justify-content: center;
   left: 0;
-  padding: 16px 0;
   position: sticky;
   text-align: center;
   top: var(--stickyHeight);
@@ -65,4 +58,8 @@
   gap: var(--storyGap);
   padding-bottom: var(--storyGap);
   position: relative;
+
+  &.lastYear {
+    padding-bottom: unset;
+  }
 }

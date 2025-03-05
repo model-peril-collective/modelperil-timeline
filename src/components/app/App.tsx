@@ -14,14 +14,14 @@ const Year = lazy(() => ComponentFactory.YearAsync());
 const App = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [years, setYears] = useState<string[]>([]);
-  const [footerRef, footerInView] = useInView({
-    /* Optional options */
-    threshold: windowWidth > 600 ? 0.2 : 0,
-  });
-
   const [heroRef, heroInView] = useInView({
-    /* Optional options */
     threshold: windowWidth > 600 ? 0.5 : 0,
+  });
+  const [timelineRef, timelineInView] = useInView({
+    threshold: 0,
+  });
+  const [footerRef, footerInView] = useInView({
+    threshold: 0.1,
   });
 
   const getYearStories = (year: string) =>
@@ -52,13 +52,23 @@ const App = () => {
         <Hero ref={heroRef} />
         <Spotify
           compact
-          className={clsx(styles.stickyPlayer, (footerInView || heroInView) && styles.hide)}
+          className={clsx(
+            styles.stickyPlayer,
+            timelineInView && !heroInView && !footerInView && styles.show
+          )}
           link="https://open.spotify.com/album/5pviUBTXTliGqQrNU4rc6X?si=ZZgd404fSKuXbYBcqYCh5w"
         />
-        <div id="stories" className={styles.yearWrapper}>
+        <div id="stories" ref={timelineRef} className={styles.yearWrapper}>
           <Suspense fallback={<p>Loading stories...</p>}>
             {years.length > 0 &&
-              years.map((year, i) => <Year key={i} id={year} stories={getYearStories(year)} />)}
+              years.map((year, i) => (
+                <Year
+                  key={i}
+                  id={year}
+                  stories={getYearStories(year)}
+                  isLastYear={i === years.length - 1}
+                />
+              ))}
           </Suspense>
         </div>
       </main>

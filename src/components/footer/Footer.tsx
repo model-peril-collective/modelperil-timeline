@@ -18,7 +18,11 @@ const Footer = () => {
       <div className={styles.socialContainer}>
         <ul className={styles.socialList}>
           <li className={clsx(styles.socialLink, styles.appleMusic)}>
-            <a href="https://music.apple.com/us/artist/model-peril/1686750556" target="_blank" rel="noreferrer">
+            <a
+              href="https://music.apple.com/us/artist/model-peril/1686750556"
+              target="_blank"
+              rel="noreferrer"
+            >
               <SiApplemusic />
             </a>
           </li>
@@ -28,12 +32,20 @@ const Footer = () => {
             </a>
           </li>
           <li className={clsx(styles.socialLink, styles.spotify)}>
-            <a href="https://open.spotify.com/artist/7qolDRFBtdsZiSzWqazZdm?si=WUImTJhwQI-vmZfSEa6C7Q" target="_blank" rel="noreferrer">
+            <a
+              href="https://open.spotify.com/artist/7qolDRFBtdsZiSzWqazZdm?si=WUImTJhwQI-vmZfSEa6C7Q"
+              target="_blank"
+              rel="noreferrer"
+            >
               <SiSpotify />
             </a>
           </li>
           <li className={clsx(styles.socialLink, styles.youtubeMusic)}>
-            <a href="https://music.youtube.com/channel/UCm3-GWXA26ZlVaAXAYfa7Ng?si=txQPNSziaRAxGhK8" target="_blank" rel="noreferrer">
+            <a
+              href="https://music.youtube.com/channel/UCm3-GWXA26ZlVaAXAYfa7Ng?si=txQPNSziaRAxGhK8"
+              target="_blank"
+              rel="noreferrer"
+            >
               <SiYoutubemusic />
             </a>
           </li>
@@ -41,7 +53,12 @@ const Footer = () => {
       </div>
       <div className={styles.footerCreds}>
         <span className={styles.copyright}>Model Peril © 2024</span>
-        <span className={styles.createdBy}>site created by <a href="https://github.com/discocisco" target="_blank" rel="noreferrer">discocisco</a></span>
+        <span className={styles.createdBy}>
+          site created by{' '}
+          <a href="https://github.com/discocisco" target="_blank" rel="noreferrer">
+            discocisco
+          </a>
+        </span>
       </div>
     </footer>
   );
