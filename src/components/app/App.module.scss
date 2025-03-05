@@ -15,10 +15,11 @@
 
 .stickyPlayer {
   background: var(--colorWhite);
-  box-shadow: 0 12px 24px 18px var(--colorPrimary);
   bottom: 48px;
+  box-shadow: 0 12px 24px 18px var(--colorPrimary);
   position: fixed;
   right: 32px;
+  transition: opacity 300ms ease-in-out;
   z-index: 1;
 
   @media (max-width: 600px) {
@@ -29,5 +30,5 @@
 }
 
 .hide {
-  display: none !important;
+  opacity: 0;
 }

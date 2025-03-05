@@ -71,12 +71,11 @@
   align-self: flex-end;
   color: var(--colorNeutral200);
   display: flex;
-  font-size: 0.88em;
+  font-size: 0.5em;
   gap: 24px;
   justify-content: space-between;
   justify-self: center;
   margin-top: 24px;
-  max-width: 1440px;
   width: 100%;
 
   @media (max-width: 600px) {

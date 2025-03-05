@@ -12,28 +12,38 @@ const Spotify = lazy(() => ComponentFactory.SpotifyAsync());
 const Year = lazy(() => ComponentFactory.YearAsync());
 
 const App = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [years, setYears] = useState<string[]>([]);
   const [footerRef, footerInView] = useInView({
     /* Optional options */
-    threshold: 0,
+    threshold: windowWidth > 600 ? 0.2 : 0,
   });
 
   const [heroRef, heroInView] = useInView({
     /* Optional options */
-    threshold: 0,
+    threshold: windowWidth > 600 ? 0.5 : 0,
   });
-
-  const [years, setYears] = useState<string[]>([]);
 
   const getYearStories = (year: string) =>
     contentJson.stories.filter((story) => year === story.date.year && !story.ignore);
 
   useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
     const unique = new Set<string>();
     contentJson.stories.forEach((story: Story) => unique.add(story.date.year));
 
     const sortedYears = [...unique].sort((a, b) => parseInt(a) - parseInt(b));
 
     setYears(sortedYears);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (
