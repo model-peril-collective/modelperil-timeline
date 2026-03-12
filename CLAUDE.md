@@ -26,6 +26,7 @@ This is a Create React App (react-scripts) project — a scrollable historical t
 All content lives in **`src/content/content.json`** as a flat `stories` array. The `App` component reads this file, derives unique years, and renders a `Year → Story → Artifact` component hierarchy.
 
 A `Story` object shape:
+
 ```json
 {
   "date": { "day": "7", "month": "August", "year": "1869" },
@@ -46,7 +47,7 @@ All components are registered in **`src/components/index.ts`** (`ComponentFactor
 ### Key components
 
 | Component | Role |
-|---|---|
+| --- | --- |
 | `App` | Reads content.json, derives sorted year list, orchestrates layout |
 | `Year` | Renders all stories for one year; tracks scroll to animate the year-bar fill for the last year |
 | `Story` | GSAP `ScrollTrigger` fade/slide animations on each artifact as it enters the viewport |
@@ -63,4 +64,5 @@ Prettier config: single quotes, 2-space indent, 100-char print width, trailing c
 ### ArtifactType enum
 
 Defined in `src/components/artifact/Artifact.tsx` and re-exported from `src/components/index.ts`:
+
 - `paragraph`, `image`, `quote`, `highlight`, `popout`

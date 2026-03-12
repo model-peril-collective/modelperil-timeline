@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { HTMLAttributes } from 'react'
+import { HTMLAttributes } from 'react';
 import styles from './Spotify.module.scss';
 
 interface SpotifyProps extends HTMLAttributes<HTMLIFrameElement> {
@@ -10,13 +10,7 @@ interface SpotifyProps extends HTMLAttributes<HTMLIFrameElement> {
 }
 
 const Spotify = (props: SpotifyProps) => {
-  const {
-    className = '',
-    compact = false,
-    glassBg = false,
-    link,
-    profile = false,
-  } = props;
+  const { className = '', compact = false, glassBg = false, link, profile = false } = props;
 
   let url;
 
@@ -29,15 +23,17 @@ const Spotify = (props: SpotifyProps) => {
   return (
     <div className={clsx(styles.container, glassBg && styles.glassBg, className)}>
       <iframe
-        src={`https://open.spotify.com/embed${profile ? profilePathname : url?.pathname}?utm_source=generator&theme=0`}
+        src={`https://open.spotify.com/embed${
+          profile ? profilePathname : url?.pathname
+        }?utm_source=generator&theme=0`}
         width="100%"
         height={compact ? '80' : '352'}
         allowFullScreen={false}
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       />
-    </div >
-  )
+    </div>
+  );
 };
 
 export default Spotify;
